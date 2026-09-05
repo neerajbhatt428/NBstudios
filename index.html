@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NB Studios | Apps & Games</title>
+    <style>
+        /* CSS Reset & Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Variables for easy theme changing */
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #1a2235;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-1: #00f2fe;
+            --accent-2: #4facfe;
+            --gradient: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-1);
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at top, #1a2235 0%, #0b0f19 70%);
+        }
+
+        .tagline {
+            color: var(--accent-1);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            background: var(--gradient);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Main Content Container */
+        main {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 6rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h2 span {
+            border-bottom: 3px solid var(--accent-2);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Studio Stats / Philosophy */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--surface-color);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-1);
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background: var(--surface-color);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background: #2a3449; /* Placeholder for actual images */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .project-info {
+            padding: 2rem;
+        }
+
+        .project-type {
+            font-size: 0.85rem;
+            color: var(--accent-2);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link {
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--accent-1);
+            padding-bottom: 2px;
+            transition: color 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--accent-1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface-color);
+            text-align: center;
+            padding: 3rem 5%;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-1);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can be replaced with a hamburger menu later */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NB <span>STUDIOS</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">Philosophy</a>
+            <a href="#work">Our Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="tagline">Vibe Coder | Dev Studio</div>
+        <h1>Crafting Digital<br>Experiences.</h1>
+        <p>NB Studios specializes in building immersive games, high-performance mobile apps, and flawless web experiences. We write code with a vibe.</p>
+        <a href="#work" class="cta-btn">View Our Projects</a>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2><span>The Vibe</span></h2>
+            <div class="philosophy-grid">
+                <div class="card">
+                    <h3>Game Development</h3>
+                    <p>Building immersive worlds and engaging mechanics. From concept to launch, we develop games that players can't put down.</p>
+                </div>
+                <div class="card">
+                    <h3>App Creation</h3>
+                    <p>Sleek, responsive, and intuitive mobile applications tailored for iOS and Android. We focus on UX as much as we do on the backend logic.</p>
+                </div>
+                <div class="card">
+                    <h3>Vibe Coding</h3>
+                    <p>It's not just about making it work; it's about making it feel right. Smooth animations, perfect frame rates, and stunning aesthetics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <h2><span>Latest Work</span></h2>
+            <div class="portfolio-grid">
+                
+                <div class="project">
+                    <div class="project-img">[ Insert Game Screenshot Here ]</div>
+                    <div class="project-info">
+                        <div class="project-type">Mobile Game</div>
+                        <h3>Neon Rush</h3>
+                        <p>A fast-paced endless runner with retro-synth aesthetics and tight controls. Available on iOS and Android.</p>
+                        <a href="#" class="project-link">View Details &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-img">[ Insert App Screenshot Here ]</div>
+                    <div class="project-info">
+                        <div class="project-type">Utility App</div>
+                        <h3>VibeTracker</h3>
+                        <p>A productivity application designed to seamlessly track habits and routines without the visual clutter of traditional apps.</p>
+                        <a href="#" class="project-link">View Details &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="logo" style="margin-bottom: 1.5rem;">NB <span>STUDIOS</span></div>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">Play Store</a>
+            <a href="#">App Store</a>
+            <a href="#">Email Us</a>
+        </div>
+        <p>&copy; 2026 NB Studios. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
