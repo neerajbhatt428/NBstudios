@@ -1,399 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NB Studios | Apps & Games</title>
-    <style>
-        /* CSS Reset & Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-        }
-
-        /* Neon Theme Variables */
-        :root {
-            --bg-color: #0b0f19;
-            --surface-color: #1a2235;
-            --surface-hover: #212b42;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-1: #00f2fe;
-            --accent-2: #4facfe;
-            --gradient: linear-gradient(135deg, var(--accent-1) 0%, var(--accent-2) 100%);
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: rgba(11, 15, 25, 0.9);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-        
-        .logo span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-1);
-        }
-
-        /* Hero Section */
-        header {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
-            background: radial-gradient(circle at top, #1a2235 0%, #0b0f19 70%);
-        }
-
-        .tagline {
-            color: var(--accent-1);
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        header p {
-            color: var(--text-muted);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-btn {
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #000;
-            background: var(--gradient);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
-        }
-
-        /* Main Content Container */
-        main {
-            padding: 5rem 5%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: 8rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        h2 span {
-            border-bottom: 3px solid var(--accent-2);
-            padding-bottom: 0.5rem;
-        }
-
-        /* Expertise Grid */
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--surface-color);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(0, 242, 254, 0.5);
-            background: var(--surface-hover);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-1);
-        }
-
-        .card p {
-            color: var(--text-muted);
-        }
-
-        /* Portfolio Rows (Text-Only) */
-        .portfolio-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .project-row {
-            background: var(--surface-color);
-            padding: 3rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .project-row:hover {
-            border-color: rgba(0, 242, 254, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
-            background: var(--surface-hover);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .project-row h3 {
-            font-size: 1.8rem;
-            font-weight: 800;
-        }
-
-        .tag {
-            background: rgba(0, 242, 254, 0.1);
-            color: var(--accent-1);
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(0, 242, 254, 0.2);
-        }
-
-        .project-row p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            max-width: 800px;
-        }
-
-        .project-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border-bottom: 2px solid var(--accent-1);
-            padding-bottom: 4px;
-            transition: color 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--accent-1);
-        }
-
-        /* Footer / Contact */
-        footer {
-            background: var(--surface-color);
-            padding: 5rem 5% 3rem;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .contact-box {
-            margin-bottom: 4rem;
-        }
-
-        .contact-box h2 {
-            margin-bottom: 1rem;
-        }
-
-        .contact-box p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .email-link {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .email-link:hover {
-            opacity: 0.8;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            gap: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 2rem;
-        }
-
-        .footer-bottom p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .project-row { padding: 2rem; }
-            .footer-bottom { justify-content: center; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NB Studios – Android apps and games</title>
+<meta name="description" content="NB Studios is an independent Android developer from India building useful apps and games for Google Play.">
+<link rel="canonical" href="https://www.nbstudios.co.in/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5F1;--ink:#14201A;--forest:#12332B;--mint:#BFE3D0;--sun:#FFC93C;--muted:#52615A;--line:#D5DDD6}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1A15;--ink:#E9F0EA;--forest:#0A2620;--muted:#9DB0A5;--line:#24372F}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:800 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+nav a{margin-left:22px;text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.hero{background:var(--forest);color:#F2F5F1;border-radius:0 0 36px 36px;padding-bottom:72px;overflow:hidden}
+.hero .logo{color:#F2F5F1}
+.hero h1{font-size:clamp(3.4rem,13vw,9.5rem);font-weight:800;letter-spacing:-.04em;margin-top:56px}
+.hero h1 span{color:var(--sun)}
+.hero p{max-width:34rem;font-size:1.25rem;color:#CFE3D8;margin:24px 0 32px}
+.btn{display:inline-block;background:var(--sun);color:#14201A;font-weight:600;padding:14px 26px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(1.07)}
+section{padding:80px 0}
+h2{font-size:clamp(2rem,5vw,3rem);font-weight:800;letter-spacing:-.025em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:36rem;margin:0 0 40px}
+.apps{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.app{border:1.5px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.app:nth-child(2){border-radius:20px 20px 64px 20px}
+.app:nth-child(3){border-radius:64px 20px 20px 20px}
+.icon{width:56px;height:56px;border-radius:16px;background:var(--forest);color:var(--sun);display:grid;place-items:center;font:800 1.5rem "Bricolage Grotesque",sans-serif}
+.app h3{font-size:1.5rem}
+.app p{margin:0;color:var(--muted);flex:1}
+.app a{font-weight:600;text-underline-offset:4px}
+.about{background:var(--mint);color:#14201A;border-radius:36px}
+.about .wrap{display:grid;gap:40px;grid-template-columns:1fr 1fr;align-items:start}
+.about p{margin:0 0 14px;max-width:34rem}
+.about ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.about li{border-top:1.5px solid #14201A;padding-top:12px;font-weight:500}
+.contact a.mail{font:800 clamp(1.5rem,4.5vw,2.8rem) "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;text-underline-offset:8px;text-decoration-color:var(--sun);text-decoration-thickness:4px;word-break:break-all}
+.policy{max-width:46rem}
+.policy h3{font-size:1.3rem;margin:28px 0 6px}
+.policy p,.policy li{color:var(--muted)}
+footer{border-top:1.5px solid var(--line);padding:28px 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:720px){.about .wrap{grid-template-columns:1fr}nav a{margin-left:14px}section{padding:56px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">NB <span>STUDIOS</span></div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#work">Our Work</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home">
-        <div class="tagline">Vibe Coder | Dev Studio</div>
-        <h1>Engineering Digital<br>Experiences.</h1>
-        <p>NB Studios builds precision-crafted games, utility apps, and web platforms. We focus on clean code, seamless mechanics, and exceptional user experiences.</p>
-        <a href="#work" class="cta-btn">Explore Projects</a>
+<div class="hero">
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="#">NB Studios</a>
+      <nav><a href="#apps">Apps</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
     </header>
+    <h1>Small apps, <span>built properly.</span></h1>
+    <p>NB Studios is an independent Android developer from India. We make games and tools that are fast, work offline and respect your data.</p>
+    <a class="btn" href="#apps">See our apps</a>
+  </div>
+</div>
 
-    <main>
-        <!-- Expertise Section -->
-        <section id="expertise">
-            <h2><span>The Vibe</span></h2>
-            <div class="philosophy-grid">
-                <div class="card">
-                    <h3>Game Development</h3>
-                    <p>Designing engaging mechanics and optimized gameplay loops. We build logic-driven, entertaining experiences that keep users hooked.</p>
-                </div>
-                <div class="card">
-                    <h3>App Architecture</h3>
-                    <p>Developing structural, highly-functional utility and productivity applications designed to solve real-world problems efficiently.</p>
-                </div>
-                <div class="card">
-                    <h3>Vibe Coding</h3>
-                    <p>Writing elegant, readable, and highly optimized code. We prioritize performance without sacrificing the aesthetic flow of the software.</p>
-                </div>
-            </div>
-        </section>
+<main class="wrap">
+  <section id="apps">
+    <h2>Our apps</h2>
+    <p class="lead">Everything we publish is on Google Play. Tap an app to open its store page.</p>
+    <div class="apps">
+      <article class="app">
+        <div class="icon">A</div>
+        <h3>Arrow Puzzle</h3>
+        <p>A relaxing logic game. Follow the arrows, clear the board and keep your streak going.</p>
+        <a href="#">View on Google Play</a>
+      </article>
+      <article class="app">
+        <div class="icon">K</div>
+        <h3>KhataBook Ledger</h3>
+        <p>A simple ledger for shopkeepers to track credit and debit for every customer, even without internet.</p>
+        <a href="#">View on Google Play</a>
+      </article>
+      <article class="app">
+        <div class="icon">G</div>
+        <h3>GymTrack</h3>
+        <p>Member, plan and payment management for a gym owner. Works offline and syncs when you reconnect.</p>
+        <a href="#">View on Google Play</a>
+      </article>
+    </div>
+  </section>
+</main>
 
-        <!-- Portfolio Section -->
-        <section id="work">
-            <h2><span>Featured Work</span></h2>
-            <div class="portfolio-list">
-                
-                <!-- Project 1 -->
-                <div class="project-row">
-                    <div class="project-header">
-                        <h3>Classic Snake: Retro Arcade</h3>
-                        <span class="tag">Game Dev</span>
-                    </div>
-                    <p>A modern revival of the timeless classic. Engineered for flawless input response, progressive difficulty scaling, and high-score tracking wrapped in a clean, nostalgic interface.</p>
-                    <div class="project-links">
-                        <a href="#">Play Now &rarr;</a>
-                    </div>
-                </div>
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <h2>About NB Studios</h2>
+      <p>We are a one-developer studio. Every app is designed, written and supported by the same person, so feedback reaches the one who can act on it.</p>
+      <p>We build native Android apps for everyday needs, from small-business tools to games you can play in a few minutes.</p>
+    </div>
+    <ul>
+      <li>Native Android, built for low-end and mid-range phones</li>
+      <li>Offline first, so apps work without a connection</li>
+      <li>No selling of personal data</li>
+      <li>Replies to every support email</li>
+    </ul>
+  </div>
+</section>
 
-                <!-- Project 2 -->
-                <div class="project-row">
-                    <div class="project-header">
-                        <h3>MyFinTracker: Budget, Income & Expense Tracker</h3>
-                        <span class="tag">App Dev</span>
-                    </div>
-                    <p>A comprehensive financial utility application. Features intuitive data visualization, secure local storage, and custom categorization to give users complete control over their personal economy.</p>
-                    <div class="project-links">
-                        <a href="#">View Application &rarr;</a>
-                    </div>
-                </div>
+<main class="wrap">
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p class="lead">Questions, bug reports or business enquiries. We reply within two working days.</p>
+    <a class="mail" href="mailto:contact@nbstudios.co.in">contact@nbstudios.co.in</a>
+  </section>
 
-            </div>
-        </section>
-    </main>
+  <section id="privacy" class="policy">
+    <h2>Privacy policy</h2>
+    <p class="lead">Last updated: October 2026. This policy applies to all apps published by NB Studios on Google Play.</p>
+    <h3>Information we collect</h3>
+    <p>Most of our apps store your data only on your device and do not send it to us. If an app asks for a permission, it is used only for the feature it names.</p>
+    <h3>Third-party services</h3>
+    <p>Some apps may use Google Play services, Firebase or Google AdMob for crash reports, analytics or ads. These services may collect device identifiers and usage data under their own privacy policies.</p>
+    <h3>Data sharing</h3>
+    <p>We do not sell your personal information. We share data only when required by law.</p>
+    <h3>Children</h3>
+    <p>Our apps are not directed at children under 13, and we do not knowingly collect their personal information.</p>
+    <h3>Your choices</h3>
+    <p>You can delete an app at any time to remove its local data. To ask about your data, email <a href="mailto:contact@nbstudios.co.in">contact@nbstudios.co.in</a>.</p>
+  </section>
+</main>
 
-    <!-- Footer / Contact -->
-    <footer id="contact">
-        <div class="contact-box">
-            <h2><span>Let's Connect</span></h2>
-            <p>Currently open for new collaborations, game ideas, and app development inquiries.</p>
-            <a href="mailto:neerajbhatt428@gmail.com" class="email-link">neerajbhatt428@gmail.com</a>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="logo">NB <span>STUDIOS</span></div>
-            <p>&copy; 2026 NB Studios. All rights reserved.</p>
-        </div>
-    </footer>
-
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> NB Studios. All rights reserved.</span>
+    <span>www.nbstudios.co.in</span>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
