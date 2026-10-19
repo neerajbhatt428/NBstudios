@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NB Studios – Android Apps &amp; Games</title>
-<meta name="description" content="NB Studios is an independent Android developer from India. We build fast, offline apps and games like MyFinTracker, Classic Snake, Status Saver 2026, and PDF Reader.">
+<meta name="description" content="NB Studios is an independent Android developer from India. We build fast, offline apps and games like MyFinTracker, Classic Snake, Status Saver 2026, PDF Reader, and GymPilot.">
 <link rel="canonical" href="https://www.nbstudios.co.in/">
 <meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
@@ -13,11 +13,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NB Studios">
 <meta property="og:title" content="NB Studios – Android Apps &amp; Games">
-<meta property="og:description" content="Track spending, play Classic Snake, save statuses, or edit PDFs. Offline, private, and fast.">
+<meta property="og:description" content="Track spending, play Classic Snake, save statuses, edit PDFs, or manage your gym. Offline, private, and fast.">
 <meta property="og:url" content="https://www.nbstudios.co.in/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NB Studios – Android Apps &amp; Games">
-<meta name="twitter:description" content="Track spending, play Classic Snake, save statuses, or edit PDFs. Offline, private, and fast.">
+<meta name="twitter:description" content="Track spending, play Classic Snake, save statuses, edit PDFs, or manage your gym. Offline, private, and fast.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,6 +96,7 @@ h2{font-size:clamp(1.85rem,4.8vw,3rem);font-weight:800;letter-spacing:-.025em;ma
 }
 .app-card:hover{transform:translateY(-3px);border-color:var(--forest);box-shadow:0 22px 48px -30px rgba(18,51,43,.6)}
 
+/* Keeps icon and text side-by-side on all screens */
 .app-head{display:flex;align-items:center;gap:16px}
 .app-head > div:not(.icon) {
   flex: 1;
@@ -284,7 +285,7 @@ footer a{text-underline-offset:4px}
           </div>
         </article>
 
-        <!-- App 4: PDF Reader & Editor (Coming Soon) -->
+        <!-- App 4: PDF Reader & Editor -->
         <article class="app-card">
           <div class="app-head">
             <div class="icon" aria-hidden="true">
@@ -311,6 +312,37 @@ footer a{text-underline-offset:4px}
           <div class="app-actions">
             <span class="btn btn-disabled">Coming Soon</span>
             <a href="privacy-pdfreader.html" style="font-weight:600; font-size:0.9rem; text-underline-offset:4px; color:var(--muted);">Privacy Policy</a>
+          </div>
+        </article>
+
+        <!-- App 5: GymPilot (Coming Soon) -->
+        <article class="app-card">
+          <div class="app-head">
+            <div class="icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6.5 6.5h11"/>
+                <path d="M6.5 17.5h11"/>
+                <path d="M3 10v4"/>
+                <path d="M21 10v4"/>
+                <path d="M6.5 6.5v11"/>
+                <path d="M17.5 6.5v11"/>
+              </svg>
+            </div>
+            <div>
+              <h3>GymPilot <span class="badge">Coming Soon</span></h3>
+              <p class="tagline">Gym Management</p>
+            </div>
+          </div>
+          <p class="app-desc">A complete gym management app. Keep track of members, subscription plans, payments, and attendance — all in one place, working fully offline.</p>
+          <ul class="features">
+            <li>Member &amp; staff tracking</li>
+            <li>Payment &amp; plan management</li>
+            <li>Attendance logs</li>
+            <li>Works fully offline</li>
+          </ul>
+          <div class="app-actions">
+            <span class="btn btn-disabled">Coming Soon</span>
+            <a href="privacy-gympilot.html" style="font-weight:600; font-size:0.9rem; text-underline-offset:4px; color:var(--muted);">Privacy Policy</a>
           </div>
         </article>
       </div>
@@ -404,6 +436,15 @@ footer a{text-underline-offset:4px}
         "name": "PDF Reader & Editor",
         "operatingSystem": "Android",
         "applicationCategory": "ProductivityApplication"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "MobileApplication",
+        "name": "GymPilot",
+        "operatingSystem": "Android",
+        "applicationCategory": "BusinessApplication"
       }
     }
   ]
