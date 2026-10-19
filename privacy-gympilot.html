@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – GymPilot | NB Studios</title>
+<meta name="description" content="Privacy Policy for GymPilot by NB Studios. GymPilot keeps your gym's data on your phone.">
+<meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
+<style>
+:root{
+  --bg:#F2F5F1;--ink:#14201A;--forest:#12332B;--mint:#BFE3D0;--sun:#FFC93C;
+  --muted:#52615A;--line:#D5DDD6;--card:#FFFFFF;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1A15;--ink:#E9F0EA;--forest:#0A2620;--muted:#9DB0A5;--line:#24372F;--card:#132620;--mint:#1A3A2E}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 1rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:var(--ink);text-decoration-color:var(--sun);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:3px}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:900px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;text-decoration:none;font-size:1rem}
+.brand-mark{width:28px;height:28px;border-radius:8px;background:var(--forest);color:var(--sun);display:grid;place-items:center;font-weight:800;font-size:.8rem;flex:none}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:500;text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px;border:1px solid var(--line);transition:background .15s ease,color .15s ease}
+.back-link:hover{background:var(--card);color:var(--ink);text-decoration:none}
+.back-link svg{flex:none}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+.hero{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin:0 0 16px;line-height:1.1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:.85rem;color:var(--muted);margin-bottom:20px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);padding:5px 12px;border-radius:999px;font-weight:500}
+.chip strong{color:var(--ink);font-weight:600}
+.lede{font-size:1.05rem;color:var(--muted);max-width:640px;margin:0}
+
+.toc{margin:32px 0 0;padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.toc summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;align-items:center;gap:8px;color:var(--ink);user-select:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:"+";margin-left:auto;font-size:1.15rem;font-weight:500;color:var(--muted);transition:transform .2s ease}
+.toc[open] summary::after{transform:rotate(45deg)}
+.toc ol{margin:14px 0 0;padding:0 0 0 4px;list-style:none;display:grid;gap:6px;grid-template-columns:1fr;counter-reset:toc}
+@media(min-width:640px){.toc ol{grid-template-columns:1fr 1fr;column-gap:24px}}
+.toc li{counter-increment:toc;font-size:.92rem}
+.toc li a{display:inline-flex;gap:10px;color:var(--muted);text-decoration:none;padding:3px 0;transition:color .15s ease}
+.toc li a::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--sun);background:color-mix(in srgb,var(--sun) 14%,transparent);padding:2px 6px;border-radius:5px;flex:none}
+.toc li a:hover{color:var(--ink)}
+
+article{padding:8px 0 80px}
+article section{padding:32px 0 0}
+article h2{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+article h2 .num{font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--forest);background:var(--mint);padding:4px 8px;border-radius:6px;flex:none}
+@media (prefers-color-scheme:dark){article h2 .num{color:var(--sun);background:var(--mint)}}
+article p{color:var(--muted);margin:0 0 14px}
+article p strong{color:var(--ink);font-weight:600}
+article ul{margin:0 0 16px;padding:0;list-style:none}
+article ul li{position:relative;padding:6px 0 6px 28px;color:var(--muted)}
+article ul li::before{content:"";position:absolute;left:6px;top:1.05em;width:7px;height:7px;border-radius:50%;background:var(--sun)}
+article ul li strong{color:var(--ink);font-weight:600}
+
+/* Table Styles */
+.table-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:.95rem;min-width:500px}
+th,td{padding:12px 16px;border-bottom:1px solid var(--line)}
+th{background:color-mix(in srgb, var(--card) 90%, var(--line));font-weight:600;color:var(--ink)}
+tr:last-child td{border-bottom:none}
+td{color:var(--muted);vertical-align:top}
+td strong{color:var(--ink);font-weight:600}
+
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:12px;padding:16px 20px;margin:0 0 20px;font-size:.95rem;color:var(--ink)}
+.note p{margin:0;color:var(--ink)}
+.note strong{color:var(--forest)}
+@media (prefers-color-scheme:dark){.note strong{color:var(--sun)}}
+
+.contact-card{margin-top:32px;padding:24px;background:var(--forest);color:#F2F5F1;border-radius:16px}
+.contact-card h2{color:#F2F5F1;margin:0 0 8px}
+.contact-card h2 .num{background:var(--sun);color:var(--forest)}
+.contact-card p{color:#CFE3D8;margin:0 0 8px}
+.contact-card a{color:var(--sun);font-weight:600;text-decoration-color:var(--sun);word-break:break-word}
+.contact-card dl{margin:12px 0 0;display:grid;gap:6px;font-size:.92rem}
+.contact-card dt{color:#9DB0A5;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.contact-card dd{margin:0 0 8px;color:#F2F5F1;font-weight:500}
+.contact-card code{font-family:var(--mono);font-size:.86rem;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;color:var(--sun)}
+
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.88rem;color:var(--muted)}
+
+@media print{
+  .topbar,.toc,.back-link,footer{display:none}
+  body{background:#fff;color:#000}
+  article{padding:0}
+  .contact-card{background:#f0f0f0;color:#000;border:1px solid #ccc}
+  .contact-card h2,.contact-card p,.contact-card a,.contact-card dd{color:#000}
+  .contact-card code{background:#e0e0e0;color:#000}
+  a{text-decoration:none;color:#000}
+  .table-wrap{border-color:#ccc}
+  th,td{border-color:#ccc}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">NB</span>
+      <span>NB Studios</span>
+    </a>
+    <a class="back-link" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to home
+    </a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span class="chip"><strong>GymPilot</strong></span>
+      <span class="chip">Effective: 19 Oct 2026</span>
+      <span class="chip">Updated: 19 Oct 2026</span>
+    </div>
+    <p class="lede"><strong>GymPilot keeps your gym's data on your phone.</strong> We do not collect, see or sell your members' details, payments or expenses.</p>
+
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#s1">About this policy</a></li>
+        <li><a href="#s2">Information you enter</a></li>
+        <li><a href="#s3">What leaves your phone</a></li>
+        <li><a href="#s4">Phone permissions</a></li>
+        <li><a href="#s5">Security</a></li>
+        <li><a href="#s6">Keeping &amp; deleting data</a></li>
+        <li><a href="#s7">Your rights</a></li>
+        <li><a href="#s8">Children</a></li>
+        <li><a href="#s9">Changes to this policy</a></li>
+      </ol>
+    </details>
+  </div>
+
+  <article>
+
+    <section id="s1">
+      <h2><span class="num">01</span> About this policy</h2>
+      <p>This policy explains how the GymPilot Android app (package <code style="font-family:var(--mono);font-size:.9em">com.neeraj.gympilot</code>) handles information. GymPilot is published by Neeraj Bhatt / NB Studios ("we", "us"). The app is used by gym owners and their staff ("you") to manage members, memberships, payments, expenses, attendance and reports. Your gym's members do not use the app.</p>
+      <div class="note">
+        <p><strong>GymPilot works offline.</strong> It has no user accounts, no cloud sync, no advertising and no analytics or crash-reporting tools.</p>
+      </div>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">02</span> Information you enter, and where it stays</h2>
+      <p>You may enter:</p>
+      <ul>
+        <li><strong>About your gym:</strong> gym name, branches, address, phone numbers, email, packages, batches and message templates.</li>
+        <li><strong>About your members:</strong> name, mobile number, and optionally email, address, emergency contact, photo, notes, batch, membership dates, fees, payments, refunds, freezes and attendance.</li>
+        <li><strong>About your business:</strong> expenses, vendors, invoice numbers and receipt photos.</li>
+        <li><strong>Activity log:</strong> a record of actions taken in the app (for example "payment reversed"), with whether the owner or staff did it.</li>
+      </ul>
+      <p>All of this is stored <strong>only on your device</strong>, in the app's private storage. We never receive it. Android's automatic cloud backup is turned off for this data.</p>
+      <p><em>You decide what to record about your members. You are responsible for having a lawful reason to record their information and for telling them how you use it.</em></p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">03</span> What leaves your phone</h2>
+      <p>Only the following, and only when you use the feature.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>When</th><th>What is sent</th><th>To whom</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>You buy or restore a subscription</td>
+              <td>Google Play purchase token and a random ID created for this app installation</td>
+              <td>Our subscription server (Cloudflare), over HTTPS</td>
+              <td>To confirm the subscription with Google and keep it active on one phone at a time</td>
+            </tr>
+            <tr>
+              <td>You buy a subscription</td>
+              <td>Payment details</td>
+              <td>Google Play only</td>
+              <td>Google processes the payment under its own terms. We never see your card or UPI details</td>
+            </tr>
+            <tr>
+              <td>You send a message to a member</td>
+              <td>The message text and the member's number</td>
+              <td>WhatsApp or SMS app you choose</td>
+              <td>The app opens that app with the message ready; you press send</td>
+            </tr>
+            <tr>
+              <td>You share or save a report, receipt or backup</td>
+              <td>The file you chose</td>
+              <td>The place you pick (Drive, WhatsApp, a folder)</td>
+              <td>Exporting is always your choice</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Our server stores only a one-way hash of the purchase token, the installation ID, the plan and its expiry, and a count of phone moves. <strong>No member, payment, expense or other gym data is ever sent to us.</strong></p>
+      <p>Backup files contain all your gym data. Keep them somewhere private. We do not sell, rent or share any information with advertisers or data brokers.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">04</span> Phone permissions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Permission</th><th>Why it is used</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Contacts (optional)</strong></td>
+              <td>Only when you choose to import several contacts as members. Only the contacts you confirm are saved, on the phone. Picking a single contact uses Android's picker and needs no permission.</td>
+            </tr>
+            <tr>
+              <td><strong>Biometrics (optional)</strong></td>
+              <td>To unlock the app with your fingerprint or face if you turn on App lock. The fingerprint stays with Android; the app never receives it.</td>
+            </tr>
+            <tr>
+              <td><strong>Internet</strong></td>
+              <td>Only to check your subscription with our server and Google Play.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Photos and receipts are chosen with Android's photo picker, which shares only the images you select. The app does not ask for location, camera, microphone or full storage access.</p>
+      <p>If you set an App lock or staff PIN, only a salted hash of it is stored on the phone.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">05</span> Security</h2>
+      <p>Data on the phone is kept in the app's private storage, which other apps cannot read. You can add an App lock with a PIN, password or fingerprint, and a separate staff PIN with limited access. All communication with our server uses HTTPS.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">06</span> Keeping and deleting data</h2>
+      <ul>
+        <li><strong>On your phone:</strong> data stays until you delete it. Settings → Backup &amp; data → Delete all data removes every record, photo, receipt and setting. Uninstalling the app also removes them. Backup files you saved elsewhere are not affected.</li>
+        <li><strong>On our server:</strong> the subscription record is kept while your subscription is active and for up to 12 months after, for fraud prevention. Email us to have it deleted sooner.</li>
+      </ul>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">07</span> Your rights</h2>
+      <p>Under India's Digital Personal Data Protection Act, 2023 and similar laws, you can ask to see, correct or delete the data we hold about you (only the subscription record described above) and raise a grievance. We reply within 30 days. Your gym's members should contact the gym directly, since only the gym holds their data.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">08</span> Children</h2>
+      <p>GymPilot is meant for business owners and is not directed at children under 18.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">09</span> Changes to this policy</h2>
+      <p>If we change what the app collects, we will update this page and the date at the top before the change takes effect.</p>
+    </section>
+
+    <div class="contact-card">
+      <h2><span class="num">10</span> Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us:</p>
+      <dl>
+        <dt>Developer</dt><dd>NB Studios</dd>
+        <dt>App Name</dt><dd>GymPilot</dd>
+        <dt>Package Name</dt><dd><code>com.neeraj.gympilot</code></dd>
+      </dl>
+      <p style="margin-top:12px"><a href="mailto:admin@nbstudios.co.in">admin@nbstudios.co.in</a></p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> NB Studios. All rights reserved.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
