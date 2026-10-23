@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Ultimate Gym Management App for Gym Owners | GymHQ</title>
-<meta name="description" content="Stop drowning in paperwork. GymHQ helps gym owners track members, payments, attendance, and expenses effortlessly. Discover the best offline gym management app.">
+<title>The Ultimate Guide to Gym Management Software | GymHQ</title>
+<meta name="description" content="Stop losing money to paper registers. Learn how to manage your gym effectively, track member attendance, and automate payments with GymHQ, the best offline gym management app.">
 <link rel="canonical" href="https://www.nbstudios.co.in/gym-management-app.html">
 <meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stop Drowning in Paperwork: The Ultimate Gym Management App">
-<meta property="og:description" content="Track members, collect payments, and manage expenses with GymHQ. The offline-first app built for fitness business owners.">
+<meta property="og:title" content="The Ultimate Guide to Gym Management Software: Why You Need GymHQ">
+<meta property="og:description" content="Running a fitness business is hard. Managing its admin shouldn't be. Discover how GymHQ solves the 6 biggest headaches for gym owners.">
 <meta property="og:url" content="https://www.nbstudios.co.in/gym-management-app.html">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Stop Drowning in Paperwork: The Ultimate Gym Management App">
+<meta name="twitter:title" content="The Ultimate Guide to Gym Management Software">
 <meta name="twitter:description" content="Track members, collect payments, and manage expenses with GymHQ. The offline-first app built for fitness business owners.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
@@ -35,10 +35,10 @@
 html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:400 1.0625rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font:400 1.0625rem/1.75 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
-h1,h2,h3{line-height:1.2; margin:0; font-weight:800; letter-spacing:-0.02em;}
+h1,h2,h3,h4{line-height:1.2; margin:0; font-weight:800; letter-spacing:-0.02em;}
 p{margin:0 0 20px;}
 a{color:var(--ink); text-decoration-color:var(--sun); text-decoration-thickness:2px; text-underline-offset:3px;}
 a:hover{text-decoration-thickness:3px;}
@@ -64,51 +64,63 @@ img,svg{max-width:100%; display:block;}
 .hero h1{font-size:clamp(2.2rem,6vw,3.2rem); margin-bottom:16px; letter-spacing:-.03em;}
 .meta{display:flex; flex-wrap:wrap; gap:16px; font-size:.9rem; color:var(--muted); margin-bottom:24px;}
 .meta span{display:flex; align-items:center; gap:6px;}
-.lede{font-size:1.15rem; color:var(--muted); margin:0;}
+.lede{font-size:1.2rem; color:var(--muted); margin:0; font-weight:400;}
 
 /* ---------- Table of Contents ---------- */
-.toc{margin:0 0 40px; padding:20px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
-.toc h4{margin:0 0 12px; font-size:1rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
-.toc ul{margin:0; padding:0; list-style:none; display:grid; gap:8px;}
-.toc li a{color:var(--ink); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:8px;}
-.toc li a::before{content:"→"; color:var(--sun); font-weight:800;}
+.toc{margin:0 0 40px; padding:24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
+.toc h4{margin:0 0 16px; font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
+.toc ul{margin:0; padding:0; list-style:none; display:grid; gap:10px;}
+.toc li a{color:var(--ink); text-decoration:none; font-weight:500; display:inline-flex; align-items:flex-start; gap:10px;}
+.toc li a::before{content:"→"; color:var(--sun); font-weight:800; line-height:1.5;}
 .toc li a:hover{text-decoration:underline; text-underline-offset:4px;}
 
 /* ---------- Article Content ---------- */
-article h2{font-size:clamp(1.6rem,4vw,2.2rem); margin:48px 0 20px; padding-bottom:12px; border-bottom:2px solid var(--line);}
-article h3{font-size:1.25rem; margin:32px 0 12px;}
-article ul, article ol{margin:0 0 24px; padding-left:20px; color:var(--muted);}
-article li{margin-bottom:8px;}
+article h2{font-size:clamp(1.6rem,4vw,2.2rem); margin:56px 0 24px; padding-bottom:12px; border-bottom:2px solid var(--line);}
+article h3{font-size:1.35rem; margin:36px 0 16px; color:var(--forest);}
+article ul, article ol{margin:0 0 24px; padding-left:24px; color:var(--muted);}
+article li{margin-bottom:10px;}
 article li strong{color:var(--ink);}
 
 /* Callout Boxes */
-.problem-box{background:var(--card); border-left:4px solid #E74C3C; padding:20px 24px; border-radius:0 12px 12px 0; margin:0 0 32px;}
-.problem-box h3{margin:0 0 8px; color:#E74C3C;}
-.solution-box{background:var(--mint); border-left:4px solid var(--forest); padding:20px 24px; border-radius:0 12px 12px 0; margin:0 0 32px; color:#14201A;}
-.solution-box h3{margin:0 0 8px; color:var(--forest);}
+.problem-box{background:var(--card); border-left:4px solid #E74C3C; padding:24px; border-radius:0 12px 12px 0; margin:0 0 32px; box-shadow:0 4px 12px rgba(0,0,0,0.02);}
+.problem-box h3{margin:0 0 12px; color:#E74C3C; font-size:1.2rem;}
+.solution-box{background:var(--mint); border-left:4px solid var(--forest); padding:24px; border-radius:0 12px 12px 0; margin:32px 0; color:#14201A;}
+.solution-box h3{margin:0 0 12px; color:var(--forest); font-size:1.2rem;}
 .solution-box p:last-child{margin:0;}
 
 /* Feature Highlight */
-.feature-highlight{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin:0 0 24px;}
-.feature-highlight h4{margin:0 0 8px; font-size:1.1rem; color:var(--ink);}
-.feature-highlight p{margin:0; font-size:.95rem; color:var(--muted);}
+.feature-highlight{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin:0 0 24px; transition:transform 0.2s ease;}
+.feature-highlight:hover{transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.04);}
+.feature-highlight h4{margin:0 0 12px; font-size:1.2rem; color:var(--ink); display:flex; align-items:center; gap:8px;}
+.feature-highlight h4::before{content:""; display:inline-block; width:12px; height:12px; background:var(--sun); border-radius:3px;}
+.feature-highlight p{margin:0; font-size:.98rem; color:var(--muted);}
+
+/* Pricing Table */
+.pricing-table{width:100%; border-collapse:collapse; margin:24px 0 32px; font-size:.95rem;}
+.pricing-table th, .pricing-table td{padding:16px; text-align:left; border-bottom:1px solid var(--line);}
+.pricing-table th{background:color-mix(in srgb, var(--card) 90%, var(--line)); font-weight:700; color:var(--ink);}
+.pricing-table td{color:var(--muted);}
+.pricing-table td strong{color:var(--ink);}
+.pricing-table tr:last-child td{border-bottom:none;}
 
 /* CTA Button */
 .cta-btn{
   display:inline-flex; align-items:center; justify-content:center; gap:10px;
   background:var(--sun); color:#14201A; font-weight:700; font-size:1.1rem;
-  padding:16px 32px; border-radius:999px; text-decoration:none;
+  padding:18px 36px; border-radius:999px; text-decoration:none;
   transition:filter .18s ease, transform .18s ease; margin:16px 0; width:100%;
 }
-.cta-btn:hover{filter:brightness(1.07); transform:translateY(-2px);}
+.cta-btn:hover{filter:brightness(1.07); transform:translateY(-2px); box-shadow:0 10px 20px rgba(255,201,60,0.3);}
 .cta-btn svg{flex:none;}
-.cta-wrap{text-align:center; margin:40px 0; padding:32px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
+.cta-wrap{text-align:center; margin:56px 0; padding:40px 24px; background:var(--forest); color:#F2F5F1; border-radius:var(--radius);}
+.cta-wrap h2{border:none; margin:0 0 12px; padding:0; color:#F2F5F1;}
+.cta-wrap p{color:#CFE3D8; margin-bottom:24px;}
 
 /* FAQ */
 details.faq{background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:12px; overflow:hidden;}
-details.faq summary{padding:16px 20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+details.faq summary{padding:20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;}
 details.faq summary::-webkit-details-marker{display:none;}
-details.faq summary::after{content:"+"; font-size:1.2rem; color:var(--muted); transition:transform .2s ease;}
+details.faq summary::after{content:"+"; font-size:1.4rem; color:var(--muted); transition:transform .2s ease; line-height:1;}
 details.faq[open] summary::after{transform:rotate(45deg);}
 details.faq .faq-content{padding:0 20px 20px; color:var(--muted);}
 
@@ -117,7 +129,8 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
 
 @media(max-width:600px){
   .article-wrap{padding:24px 18px 60px;}
-  .cta-btn{font-size:1rem; padding:14px 20px;}
+  .cta-btn{font-size:1rem; padding:16px 24px;}
+  .pricing-table th, .pricing-table td{padding:12px 8px;}
 }
 </style>
 </head>
@@ -138,7 +151,7 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
 
 <main class="article-wrap">
   <header class="hero">
-    <h1>Stop Drowning in Paperwork: Why GymHQ is the Only Gym Management App You Need</h1>
+    <h1>The Ultimate Guide to Gym Management: How to Stop Losing Money and Start Scaling</h1>
     <div class="meta">
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -146,90 +159,136 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
       </span>
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        6 min read
+        9 min read
       </span>
     </div>
-    <p class="lede">Running a fitness business is hard. Managing its admin shouldn't be. Discover how GymHQ solves the 6 biggest headaches for gym owners with a beautiful, offline-first dashboard.</p>
+    <p class="lede">Running a fitness business is physically demanding. Managing its admin shouldn't be a second full-time job. Discover how GymHQ solves the 6 biggest headaches for gym owners with a beautiful, offline-first dashboard.</p>
   </header>
 
   <nav class="toc">
     <h4>What's inside</h4>
     <ul>
-      <li><a href="#the-problem">The Gym Owner's Dilemma</a></li>
-      <li><a href="#the-solution">Meet GymHQ: Your New Command Center</a></li>
-      <li><a href="#features">Inside the App: 5 Features You'll Love</a></li>
+      <li><a href="#the-problem">The 6 Silent Killers of Gym Profitability</a></li>
+      <li><a href="#the-solution">Meet GymHQ: Your Digital Business Manager</a></li>
+      <li><a href="#features">A Deep Dive into GymHQ's Features</a></li>
       <li><a href="#pricing">Plans for Every Size of Gym</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
     </ul>
   </nav>
 
   <article>
-    <h2 id="the-problem">The Gym Owner's Dilemma</h2>
-    <p>You didn't open a gym to spend your evenings staring at an Excel spreadsheet or chasing people for ₹1,500. You opened it because you love fitness and want to build a community.</p>
-    <p>But as your member count grows, the administrative chaos takes over:</p>
+    <p>You didn't open a gym to spend your evenings staring at an Excel spreadsheet or chasing people for a ₹1,500 renewal fee. You opened it because you love fitness, you want to build a community, and you want to build a profitable business.</p>
+    <p>But the reality of gym ownership is often a chaotic mix of paper registers, missing payments, staff trust issues, and a never-ending stream of administrative headaches. As your member count grows, the chaos multiplies. You become a slave to your front desk.</p>
+    <p>In this guide, we are going to explore exactly why gyms lose money, and how digitizing your operations with <strong>GymHQ</strong>—a powerful, fully offline gym management app—can completely transform your business.</p>
+
+    <h2 id="the-problem">The 6 Silent Killers of Gym Profitability</h2>
+    <p>Before we look at the solution, we need to diagnose the disease. Here are the most common problems that prevent gym owners from scaling their businesses.</p>
     
     <div class="problem-box">
-      <h3>1. The "Who Owes What?" Nightmare</h3>
-      <p>Paper registers get lost, Excel sheets have errors, and you lose track of who has paid and whose membership expired. You're leaving money on the table.</p>
+      <h3>1. The "Revenue Leakage" Nightmare</h3>
+      <p>How do you track who has paid and whose membership has expired? If you rely on a paper register or memory, you are bleeding money. Members whose memberships lapsed weeks ago are still walking in and working out for free. You lose track of who owes you money, and you waste hours every week chasing people down for payments.</p>
     </div>
+    
     <div class="problem-box">
-      <h3>2. The Trust Deficit with Staff</h3>
-      <p>Is your front desk staff giving out free entries? Are they pocketing the cash for a day pass? Without a digital trail, you are completely in the dark.</p>
+      <h3>2. The Trust Deficit with Front Desk Staff</h3>
+      <p>When you aren't at the gym, how do you know what is happening? Is your staff giving out free day-passes to their friends? Are they pocketing the cash from a new sign-up? Without a strict digital trail, you have zero visibility into your own business.</p>
     </div>
+    
     <div class="problem-box">
-      <h3>3. The Cash Flow Blind Spot</h3>
-      <p>You know money is coming in, but where is it going? Rent, salaries, equipment repairs, and electricity bills eat into your profits. If you don't track expenses, you can't grow.</p>
+      <h3>3. The "Black Hole" of Gym Expenses</h3>
+      <p>Most gym owners are great at tracking revenue, but terrible at tracking expenses. Between rent, staff salaries, electricity bills, equipment repairs, and buying water cans, your money disappears. If you don't have a strict ledger of where your cash is going, you might be busy but not actually profitable.</p>
+    </div>
+    
+    <div class="problem-box">
+      <h3>4. The Blind Spot of Member Churn</h3>
+      <p>Do you know when a member is about to quit? Usually, it’s after they haven’t shown up for two weeks. But without a digital attendance system, you won't notice they are gone until it’s time for them to renew—and by then, they’ve already joined the gym down the street.</p>
+    </div>
+    
+    <div class="problem-box">
+      <h3>5. The "Always On" Burnout</h3>
+      <p>Because your paperwork is physical, you can never truly leave the gym. If you go on vacation or take a day off, the front desk is in chaos. Your business is chained to a physical location and a binder full of paper.</p>
     </div>
 
-    <h2 id="the-solution">Meet GymHQ: Your New Command Center</h2>
-    <p>We built <strong>GymHQ</strong> after talking to dozens of gym owners who were exhausted by complicated, expensive software that required a constant internet connection.</p>
-    <p>GymHQ is an <strong>offline-first Android app</strong> designed to be your digital business manager. It stores your data securely on your phone, works perfectly without Wi-Fi, and gives you a beautiful overview of your entire business every time you open it.</p>
+    <h2 id="the-solution">Meet GymHQ: Your Digital Business Manager</h2>
+    <p>We built <strong>GymHQ</strong> after talking to dozens of gym owners who were exhausted by complicated, expensive software that required a constant internet connection and forced them to upload sensitive member data to a cloud server.</p>
+    <p>GymHQ is an <strong>offline-first Android app</strong>. It is designed to be fast, incredibly easy to use, and 100% private. All your data is stored securely on your phone. You don't need Wi-Fi to check someone in or collect a payment.</p>
 
     <div class="solution-box">
-      <h3>The Dashboard That Changes Everything</h3>
-      <p>Look at the GymHQ Home screen. In one glance, you see your <strong>Net Cash Flow</strong>. You know exactly how much revenue you've collected, what your expenses are, and—crucially—how much is <strong>still owed by members today</strong>. No more guessing.</p>
+      <h3>The Command Center Dashboard</h3>
+      <p>Look at the GymHQ Home screen. It isn't just a list of buttons; it's a snapshot of your business's health. In one glance, you see your <strong>Net Cash Flow</strong>. You know exactly how much revenue you've collected, what your expenses are, and—crucially—how much is <strong>still owed by members today</strong>. No more guessing.</p>
     </div>
 
-    <h2 id="features">Inside the App: 5 Features You'll Love</h2>
+    <h2 id="features">A Deep Dive into GymHQ's Features</h2>
 
     <div class="feature-highlight">
-      <h4>1. Flawless Member & Payment Tracking</h4>
-      <p>GymHQ acts as a complete digital ledger. When a member pays, you generate a <strong>digital receipt</strong> instantly. You can log Cash, UPI, or Card payments. If you make a mistake, you don't just delete the record—you "Reverse" it, ensuring your books always balance. You can even send a quick "Thank You" message to the member via WhatsApp right from the receipt screen.</p>
-    </div>
-
-    <div class="feature-highlight">
-      <h4>2. Zero-Chaos Expense Management</h4>
-      <p>Stop stuffing paper bills into a drawer. With GymHQ's Expense tracker, you can log rent, staff salaries, or even ₹600 for drinking water cans. You can categorize expenses, attach a photo of the invoice, and instantly see a visual breakdown of where your money is going.</p>
+      <h4>Flawless Member & Payment Tracking</h4>
+      <p>GymHQ acts as a complete digital ledger. When a member pays, you generate a <strong>digital receipt</strong> instantly. You can log Cash, UPI, or Card payments. If you make a mistake (e.g., typed ₹1,000 instead of ₹1,500), GymHQ has a unique <strong>"Reverse" feature</strong>. Instead of just deleting the error (which messes up your books), it keeps both entries visible so your ledger always balances perfectly. You can even send a quick "Thank You" message to the member via WhatsApp right from the receipt screen.</p>
     </div>
 
     <div class="feature-highlight">
-      <h4>3. Smart Attendance & Expiry Alerts</h4>
-      <p>Never let an expired member slip through the cracks. The dashboard shows you exactly who is <strong>"Expiring soon"</strong> and who hasn't shown up in a while. At the front desk, marking a member "Present" takes one tap. Your staff gets limited access, so they can check people in without seeing your private financial reports.</p>
+      <h4>Zero-Chaos Expense Management</h4>
+      <p>Stop stuffing paper bills into a drawer. With GymHQ's Expense tracker, you can log rent, staff salaries, or even ₹600 for drinking water cans. You can categorize expenses, attach a photo of the invoice, and instantly see a visual breakdown of where your money is going. GymHQ even shows you a clean summary graph, highlighting your biggest expense categories like "Rent" or "Staff Salaries."</p>
     </div>
 
     <div class="feature-highlight">
-      <h4>4. Powerful Business Reports</h4>
-      <p>Need to know your exact profit margin? Want to see which membership plan is the most popular? GymHQ includes a massive suite of reports—from Income vs. Expenses to Outstanding Balances and Member-wise payment histories. You can export any report as a CSV or PDF for your accountant.</p>
+      <h4>Smart Attendance & Expiry Alerts</h4>
+      <p>Never let an expired member slip through the cracks. The dashboard shows you exactly who is <strong>"Expiring soon"</strong> within a 7-day window. At the front desk, marking a member "Present" takes one tap. You can also view a member's profile to see a beautiful visual history of their attendance over the last 30 days. You instantly know who is consistent and who is ghosting.</p>
     </div>
 
     <div class="feature-highlight">
-      <h4>5. Complete Privacy & Automated Backups</h4>
-      <p>Because GymHQ doesn't rely on a cloud server, your data is 100% private. You can lock the app with a PIN or fingerprint. And to ensure you never lose your data if you switch phones, GymHQ features <strong>Automatic Backups</strong>—saving your entire database to Google Drive or your phone's storage daily, weekly, or monthly.</p>
+      <h4>Powerful Business Reports</h4>
+      <p>Need to know your exact profit margin? Want to see which membership plan is the most popular? GymHQ includes a massive suite of reports—from Income vs. Expenses to Outstanding Balances and Member-wise payment histories. Whether you need a "Member Directory" or a "Complete Financial Ledger," you can generate it and export it as a CSV or PDF for your accountant.</p>
+    </div>
+
+    <div class="feature-highlight">
+      <h4>Enterprise-Grade Security & Automated Backups</h4>
+      <p>Because GymHQ doesn't rely on a cloud server, your data is 100% private. You can lock the app with a PIN or biometric fingerprint. But what if you lose your phone? GymHQ features <strong>Automatic Backups</strong>. You can configure the app to save your entire database to your Google Drive, Dropbox, or local storage daily, weekly, or monthly at a time you choose (e.g., 11:00 PM).</p>
     </div>
 
     <h2 id="pricing">Plans for Every Size of Gym</h2>
-    <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you.</p>
-    <ul>
-      <li><strong>Free Plan:</strong> Perfect for new or small gyms. Manage up to 25 active members, track expenses, and use all reports completely free.</li>
-      <li><strong>Starter (₹200/mo):</strong> Up to 100 active members. Ideal for growing local gyms.</li>
-      <li><strong>Growth (₹500/mo):</strong> Up to 250 active members and 2 branches.</li>
-      <li><strong>Pro & Elite:</strong> For large commercial gyms, offering up to 1000 active members across 5 branches.</li>
-    </ul>
-    <p>All paid plans are available on monthly, quarterly (save up to 9%), and yearly discounts.</p>
+    <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you. You only pay for the active members you manage.</p>
+    
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Capacity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Free</strong></td>
+          <td>Up to 25 active members (1 Branch)</td>
+          <td>Free forever</td>
+        </tr>
+        <tr>
+          <td><strong>Starter</strong></td>
+          <td>Up to 100 active members (1 Branch)</td>
+          <td>₹200 / month</td>
+        </tr>
+        <tr>
+          <td><strong>Growth</strong></td>
+          <td>Up to 250 active members (2 Branches)</td>
+          <td>₹500 / month</td>
+        </tr>
+        <tr>
+          <td><strong>Pro</strong></td>
+          <td>Up to 500 active members (3 Branches)</td>
+          <td>₹1,000 / month</td>
+        </tr>
+        <tr>
+          <td><strong>Elite</strong></td>
+          <td>Up to 1000 active members (5 Branches)</td>
+          <td>₹2,000 / month</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>Note: GymHQ also offers quarterly and yearly plans with discounts up to 9%. All payments are handled securely via Google Play.</em></p>
 
     <div class="cta-wrap">
-      <h2 style="margin-top:0; border:none; padding:0; font-size:1.8rem;">Ready to Ditch the Register?</h2>
-      <p>Take back your time and start running your gym like a real business.</p>
+      <h2>Ready to Ditch the Register?</h2>
+      <p>Take back your time and start running your gym like a real business. Download GymHQ today and see the difference.</p>
       <a class="cta-btn" href="YOUR_PLAY_STORE_LINK_HERE" target="_blank" rel="noopener noreferrer" aria-label="Download GymHQ on Google Play">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.1v17.8c0 .5.6.9 1 .6l14.3-8.9c.4-.3.4-.9 0-1.2L5 2.5c-.4-.3-1 .1-1 .6z" fill="currentColor"/></svg>
         <span>Get GymHQ on <strong>Google Play</strong></span>
@@ -241,28 +300,35 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     <details class="faq">
       <summary>Does GymHQ require an internet connection?</summary>
       <div class="faq-content">
-        <p>No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down. The internet is only needed if you choose to back up your data to the cloud.</p>
+        <p>No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down. The internet is only needed if you choose to back up your data to the cloud or when you upgrade your subscription via Google Play.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>Is my members' data safe?</summary>
+      <summary>Is my members' data safe and private?</summary>
       <div class="faq-content">
-        <p>Absolutely. Your data is stored securely on your device. We don't sync your members' personal data to our servers. You can also enable a PIN or biometric lock to keep the app secure.</p>
+        <p>Absolutely. Unlike other apps, your members' personal data is never uploaded to our servers. It is stored securely and locally on your Android device. You can also enable an App Lock (PIN, Password, or Fingerprint) to ensure that even if someone picks up your phone, they can't access your business data.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>Can my front desk staff use it?</summary>
+      <summary>Can my front desk staff use the app?</summary>
       <div class="faq-content">
-        <p>Yes. You can set up an App Lock and assign limited staff access. They can check members in and mark payments received, but they won't be able to view your overall revenue, expenses, or profit reports.</p>
+        <p>Yes. You can set up a separate Staff PIN with limited access. Your staff can check members in and mark payments received, but they won't be able to view your overall revenue, business expenses, or profit reports. Plus, the built-in Activity Log tells you exactly who did what and when.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>How do backups work?</summary>
+      <summary>What happens if I type a payment amount wrong?</summary>
       <div class="faq-content">
-        <p>You can configure GymHQ to automatically save a secure backup file to your Google Drive, SD card, or local storage at a time you choose (e.g., 11:00 PM daily). You can also do manual backups any time.</p>
+        <p>GymHQ has a built-in "Reverse" feature. Instead of just deleting the wrong entry, you can reverse it. This keeps both the original entry and the reversal visible in your ledger so that your cash flow and accounting always add up perfectly.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>How do I move my data to a new phone?</summary>
+      <div class="faq-content">
+        <p>Using the Automatic Backup feature, you can save a secure backup file to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that backup file to get all your members, payments, and attendance history back instantly.</p>
       </div>
     </details>
 
@@ -286,8 +352,8 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
   "@graph": [
     {
       "@type": "Article",
-      "headline": "Stop Drowning in Paperwork: Why GymHQ is the Only Gym Management App You Need",
-      "description": "Stop drowning in paperwork. GymHQ helps gym owners track members, payments, attendance, and expenses effortlessly. Discover the best offline gym management app.",
+      "headline": "The Ultimate Guide to Gym Management: How to Stop Losing Money and Start Scaling",
+      "description": "Stop losing money to paper registers. Learn how to manage your gym effectively, track member attendance, and automate payments with GymHQ, the best offline gym management app.",
       "author": {
         "@type": "Organization",
         "name": "NB Studios"
@@ -311,31 +377,31 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
           "name": "Does GymHQ require an internet connection?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down. The internet is only needed if you choose to back up your data to the cloud."
+            "text": "No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down."
           }
         },
         {
           "@type": "Question",
-          "name": "Is my members' data safe?",
+          "name": "Is my members' data safe and private?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Your data is stored securely on your device. We don't sync your members' personal data to our servers. You can also enable a PIN or biometric lock to keep the app secure."
+            "text": "Absolutely. Your members' personal data is never uploaded to our servers. It is stored securely and locally on your Android device. You can also enable an App Lock."
           }
         },
         {
           "@type": "Question",
-          "name": "Can my front desk staff use it?",
+          "name": "Can my front desk staff use the app?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can set up an App Lock and assign limited staff access. They can check members in and mark payments received, but they won't be able to view your overall revenue, expenses, or profit reports."
+            "text": "Yes. You can set up a separate Staff PIN with limited access. Your staff can check members in and mark payments received, but they won't be able to view your overall revenue or profit reports."
           }
         },
         {
           "@type": "Question",
-          "name": "How do backups work?",
+          "name": "How do I move my data to a new phone?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can configure GymHQ to automatically save a secure backup file to your Google Drive, SD card, or local storage at a time you choose (e.g., 11:00 PM daily). You can also do manual backups any time."
+            "text": "Using the Automatic Backup feature, you can save a secure backup file to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that backup file."
           }
         }
       ]
