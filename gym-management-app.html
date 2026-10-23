@@ -29,7 +29,9 @@
   --radius:16px;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#0E1A15; --ink:#E9F0EA; --forest:#0A2620; --muted:#9DB0A5; --line:#24372F; --card:#132620; --mint:#1A3A2E}
+  --bg:#0E1A15; --ink:#E9F0EA; --forest:#0A2620; --muted:#9DB0A5; --line:#24372F; --card:#132620; --mint:#1A3A2E;
+  /* Fix for dark mode text visibility */
+  --heading-accent: #FFC93C;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
@@ -75,16 +77,21 @@ a:hover{text-decoration-thickness:3px;}
 
 /* ---------- Article Content ---------- */
 article h2{font-size:clamp(1.7rem,4vw,2.3rem); margin:56px 0 24px; padding-bottom:12px; border-bottom:2px solid var(--line);}
-article h3{font-size:1.4rem; margin:36px 0 16px; color:var(--forest);}
+/* FIXED: H3 color is now var(--ink) so it's white in dark mode, and added a sun-colored accent */
+article h3{font-size:1.4rem; margin:36px 0 16px; color:var(--ink); display:flex; align-items:center; gap:10px;}
+article h3::before {content:"■"; color:var(--sun); font-size:1rem;}
 article ul, article ol{margin:0 0 24px; padding-left:24px; color:var(--muted);}
 article li{margin-bottom:12px; line-height:1.6;}
 article li strong{color:var(--ink);}
 
 /* Callout Boxes */
 .problem-box{background:var(--card); border-left:4px solid #E74C3C; padding:24px; border-radius:0 12px 12px 0; margin:0 0 32px; box-shadow:0 4px 12px rgba(0,0,0,0.02);}
-.problem-box h3{margin:0 0 12px; color:#E74C3C; font-size:1.2rem;}
-.solution-box{background:var(--mint); border-left:4px solid var(--forest); padding:24px; border-radius:0 12px 12px 0; margin:32px 0; color:#14201A;}
-.solution-box h3{margin:0 0 12px; color:var(--forest); font-size:1.2rem;}
+.problem-box h3{margin:0 0 12px; color:#E74C3C; font-size:1.2rem; display:block;}
+.problem-box h3::before {content:none;}
+/* FIXED: Solution box text and background for dark mode */
+.solution-box{background:var(--card); border-left:4px solid var(--sun); padding:24px; border-radius:0 12px 12px 0; margin:32px 0; color:var(--ink);}
+.solution-box h3{margin:0 0 12px; color:var(--ink); font-size:1.2rem; display:block;}
+.solution-box h3::before {content:none;}
 .solution-box p:last-child{margin:0;}
 
 /* Feature Highlight */
@@ -215,6 +222,7 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     <h2 id="the-solution">Meet GymHQ: The Architecture of a Digital Gym</h2>
     <p>We built <strong>GymHQ</strong> after talking to dozens of gym owners who were exhausted by complicated, expensive software that required a constant internet connection and forced them to upload sensitive member data to a cloud server.</p>
     <p>GymHQ is an <strong>offline-first Android app</strong>. It is designed to be fast, incredibly easy to use, and 100% private. All your data is stored securely on your phone. You don't need Wi-Fi to check someone in or collect a payment.</p>
+    <p>But beneath the beautiful interface is an <strong>enterprise-grade architecture</strong>. We built GymHQ with a strict separation of layers: your financial rules are kept pure and secure, completely isolated from the UI. This means the app is lightning-fast, mathematically flawless, and will never lose your data.</p>
 
     <div class="solution-box">
       <h3>The Command Center Dashboard</h3>
@@ -222,41 +230,48 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     </div>
 
     <h2 id="features">A Deep Dive into GymHQ's Engine</h2>
+    <p>We didn't just build a basic calculator. We built a system designed to handle the complex edge cases of gym management. Here is how GymHQ solves the hardest problems:</p>
 
-    <h3>1. Flawless Member & Payment Tracking</h3>
+    <h3>1. Bank-Grade Financial Accuracy</h3>
     <div class="feature-highlight">
-      <h4>Digital Receipts & The "Reverse" Feature</h4>
-      <p>When a member pays, you generate a <strong>digital receipt</strong> instantly. You can log Cash, UPI, or Card payments. If you make a mistake (e.g., typed ₹1,000 instead of ₹1,500), GymHQ has a unique <strong>"Reverse" feature</strong>. Instead of just deleting the error (which messes up your books), it keeps both entries visible so your ledger always balances perfectly. You can even attach a photo of the physical receipt or slip, and send a quick "Thank You" message to the member via WhatsApp right from the receipt screen.</p>
-    </div>
-    
-    <h3>2. Zero-Chaos Expense Management</h3>
-    <div class="feature-highlight">
-      <h4>Categorize Every Rupee</h4>
-      <p>Stop stuffing paper bills into a drawer. With GymHQ's Expense tracker, you can log rent, staff salaries, or even ₹600 for drinking water cans. You can assign specific categories (Rent, Electricity, Repairs), attach a photo of the vendor's invoice, and instantly see a visual breakdown of where your money is going. GymHQ even shows you a clean summary graph, highlighting your biggest expense categories so you can optimize your spending.</p>
+      <h4>Zero Rounding Errors & The "Reverse" Feature</h4>
+      <p>GymHQ calculates all money in exact paise (never floating points), so your totals always balance to the last decimal. When a member pays, you generate a <strong>digital receipt</strong>. If you make a mistake (e.g., typed ₹1,000 instead of ₹1,500), you don't just delete it—you use our unique <strong>"Reverse" feature</strong>. This keeps both the original entry and the reversal visible, ensuring your accounting history is legally airtight and your books always balance.</p>
     </div>
 
-    <h3>3. Smart Attendance & Retention</h3>
+    <h3>2. Smart Status Tracking (Membership vs. Payment)</h3>
     <div class="feature-highlight">
-      <h4>Never Miss a Renewal Again</h4>
-      <p>The dashboard shows you exactly who is <strong>"Expiring soon"</strong> within a customizable window (e.g., the next 7 days). At the front desk, marking a member "Present" takes one tap. You can also view a member's profile to see a beautiful visual history (heatmap) of their attendance over the last 30 days. You instantly know who is consistent and who is ghosting, allowing you to reach out and save their membership before they cancel.</p>
+      <h4>Expired but Paid? Active but Unpaid?</h4>
+      <p>Other software confuses your membership status with your payment status. GymHQ treats them completely independently. You can clearly see who is <strong>Active but owes money</strong> (Partially Paid), and who is <strong>Expired but fully paid</strong>. Furthermore, the app is time-zone safe. A membership expiring on the 31st will not accidentally expire on the 30th due to daylight savings or travel.</p>
     </div>
 
-    <h3>4. Powerful Business Reports</h3>
+    <h3>3. Built-in Member Freezes & Advances</h3>
     <div class="feature-highlight">
-      <h4>Know Your Numbers</h4>
-      <p>Need to know your exact profit margin? Want to see which membership plan is the most popular? GymHQ includes a massive suite of reports—from Income vs. Expenses to Outstanding Balances and Member-wise payment histories. Whether you need a "Member Directory" or a "Complete Financial Ledger," you can generate it and export it as a CSV or PDF for your accountant.</p>
+      <h4>Handling the Real World</h4>
+      <p>If a member goes on vacation or gets injured, GymHQ allows you to <strong>Freeze</strong> their membership. The app automatically extends their expiry date by the exact number of frozen days. Also, if a member pays early, that money is held as an <strong>Advance</strong> and automatically applied to their next renewal without messing up your current month's cash flow.</p>
     </div>
 
-    <h3>5. Enterprise-Grade Security & Automated Backups</h3>
+    <h3>4. Multi-Branch Management & Messaging</h3>
+    <div class="feature-highlight">
+      <h4>Scale Your Empire</h4>
+      <p>If you own multiple gym locations, GymHQ has you covered. You can seamlessly switch between branches, and all limits are counted across your entire business. Plus, you can send pre-filled <strong>WhatsApp or SMS reminders</strong> for payment dues or renewals with a single tap, using your own customized message templates.</p>
+    </div>
+
+    <h3>5. Zero-Permission Photo Receipts</h3>
+    <div class="feature-highlight">
+      <h4>Secure & Private by Design</h4>
+      <p>Need to attach a photo of a physical receipt or a member's profile? GymHQ uses Android's system Photo Picker. This means <strong>we never ask for full access to your phone's gallery or camera</strong>. The app only gets access to the exact photo you select. Plus, there is a built-in crop editor to keep your member profiles looking sharp.</p>
+    </div>
+
+    <h3>6. Enterprise-Grade Security & Automated Backups</h3>
     <div class="feature-highlight">
       <h4>Total Peace of Mind</h4>
-      <p>Because GymHQ doesn't rely on a cloud server, your data is 100% private. You can lock the app with a PIN or biometric fingerprint. Worried about losing your phone? GymHQ features <strong>Automatic Backups</strong>. You can configure the app to save your entire database to your Google Drive, Dropbox, or local storage daily, weekly, or monthly at a time you choose (e.g., 11:00 PM). Plus, an Activity Log tracks exactly which staff member added, changed, or deleted a record.</p>
+      <p>Your PIN is protected with bank-grade PBKDF2 hashing. You can lock the app with a fingerprint (using Android's secure BiometricPrompt), and the app blocks screenshots in the recent apps menu for ultimate privacy. Worried about losing your phone? GymHQ features <strong>Automatic Backups</strong>. You can configure the app to save your entire database to your Google Drive or Dropbox daily, weekly, or monthly. Plus, an Activity Log tracks exactly which staff member changed or deleted a record.</p>
     </div>
 
     <h2 id="roi">The ROI of Gym Software: Why You Can't Afford NOT to Have It</h2>
     <p>Many gym owners hesitate to spend money on software. But let's do the math. If your monthly membership is ₹1,500, and GymHQ helps you stop just <strong>two members</strong> from slipping away due to an expired membership (which you didn't notice), the app has already paid for itself. 
     <br><br>
-    Add in the time you save (hours of manual ledger balancing), the cash you recover from outstanding balances (₹7,100 in the screenshot!), and the money you stop losing to untracked expenses. GymHQ isn't an expense; it's an investment in your gym's survival.</p>
+    Add in the time you save (hours of manual ledger balancing), the cash you recover from outstanding balances, and the money you stop losing to untracked expenses. GymHQ isn't an expense; it's an investment in your gym's survival.</p>
 
     <h2 id="pricing">Plans for Every Size of Gym</h2>
     <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you. We offer simple, transparent pricing based on the number of active members you manage. Choose a monthly, quarterly, or yearly plan.</p>
@@ -332,7 +347,7 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
         </tbody>
       </table>
     </div>
-    <p><em>Note: All payments are handled securely via Google Play. Upgrade or downgrade your plan at any time.</em></p>
+    <p><em>Note: All payments are handled securely via Google Play. You only pay for active members. Expired or archived members don't count against your limit.</em></p>
 
     <div class="cta-wrap">
       <h2>Ready to Ditch the Register?</h2>
@@ -355,7 +370,14 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     <details class="faq">
       <summary>Is my members' data safe and private?</summary>
       <div class="faq-content">
-        <p>Absolutely. Unlike other apps, your members' personal data is never uploaded to our servers. It is stored securely and locally on your Android device. You can also enable an App Lock (PIN, Password, or Fingerprint) to ensure that even if someone picks up your phone, they can't access your business data.</p>
+        <p>Absolutely. Unlike other apps, your members' personal data is never uploaded to our servers. It is stored securely in an isolated database on your Android device. You can also enable an App Lock (PIN or Fingerprint), and we use bank-grade hashing so your PIN is never stored in plain text.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>What happens if I edit a membership package's price?</summary>
+      <div class="faq-content">
+        <p>GymHQ freezes the financial charge at the exact moment a membership is created. If you change the price of a "Monthly Plan" later, it will not alter the history or balances of members who already purchased it. Your historical data is always safe.</p>
       </div>
     </details>
 
@@ -367,16 +389,9 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     </details>
 
     <details class="faq">
-      <summary>What happens if I type a payment amount wrong?</summary>
-      <div class="faq-content">
-        <p>GymHQ has a built-in "Reverse" feature. Instead of just deleting the wrong entry, you can reverse it. This keeps both the original entry and the reversal visible in your ledger so that your cash flow and accounting always add up perfectly.</p>
-      </div>
-    </details>
-
-    <details class="faq">
       <summary>How do I move my data to a new phone?</summary>
       <div class="faq-content">
-        <p>Using the Automatic Backup feature, you can save a secure backup file to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that backup file to get all your members, payments, and attendance history back instantly.</p>
+        <p>Using the Automatic Backup feature, you can save a secure, zipped backup file (which includes your database and photos) to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that file. The app validates the backup before restoring to ensure your data is safe.</p>
       </div>
     </details>
 
