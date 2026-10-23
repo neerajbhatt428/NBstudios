@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gym Expense Management: Track Gym Costs and Collections | GymHQ</title>
+<meta name="description" content="Learn how to track gym expenses, rent, salaries, utilities and member collections. See how GymHQ helps organise expense records and reports.">
+<link rel="canonical" href="https://www.nbstudios.co.in/gym-expense-management-tracking.html">
+<meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Track Gym Expenses and Collections: A Practical Guide">
+<meta property="og:description" content="Learn how to track gym expenses, rent, salaries, utilities and member collections. See how GymHQ helps organise expense records and reports.">
+<meta property="og:url" content="https://www.nbstudios.co.in/gym-expense-management-tracking.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Track Gym Expenses and Collections: A Practical Guide">
+<meta name="twitter:description" content="Learn how to track gym expenses, rent, salaries, utilities and member collections. See how GymHQ helps organise expense records and reports.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
+
+<style>
+:root{
+  --bg:#F2F5F1; --ink:#14201A; --forest:#12332B; --mint:#BFE3D0; --sun:#FFC93C;
+  --muted:#52615A; --line:#D5DDD6; --card:#FFFFFF;
+  --radius:16px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1A15; --ink:#E9F0EA; --forest:#0A2620; --muted:#9DB0A5; --line:#24372F; --card:#132620; --mint:#1A3A2E}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:400 1.0625rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4{line-height:1.2; margin:0; font-weight:800; letter-spacing:-0.02em;}
+p{margin:0 0 20px;}
+a{color:var(--ink); text-decoration-color:var(--sun); text-decoration-thickness:2px; text-underline-offset:3px;}
+a:hover{text-decoration-thickness:3px;}
+img,svg{max-width:100%; display:block;}
+
+/* ---------- Topbar ---------- */
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:800px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.02em; text-decoration:none; font-size:1rem;}
+.brand-mark{width:28px; height:28px; border-radius:8px; background:var(--forest); color:var(--sun); display:grid; place-items:center; font-weight:800; font-size:.8rem; flex:none;}
+.back-link{display:inline-flex; align-items:center; gap:6px; font-size:.9rem; font-weight:500; text-decoration:none; color:var(--muted); padding:8px 14px; border-radius:999px; border:1px solid var(--line); transition:background .15s ease,color .15s ease;}
+.back-link:hover{background:var(--card); color:var(--ink); text-decoration:none;}
+
+/* ---------- Layout ---------- */
+.article-wrap{max-width:800px; margin:0 auto; padding:40px 24px 80px;}
+.hero{margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid var(--line);}
+.hero h1{font-size:clamp(2rem,6vw,2.8rem); margin-bottom:16px; letter-spacing:-.03em;}
+.meta{display:flex; flex-wrap:wrap; gap:16px; font-size:.9rem; color:var(--muted); margin-bottom:24px;}
+.meta span{display:flex; align-items:center; gap:6px;}
+.lede{font-size:1.15rem; color:var(--muted); margin:0;}
+
+/* ---------- Table of Contents ---------- */
+.toc{margin:0 0 40px; padding:20px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
+.toc h4{margin:0 0 12px; font-size:1rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
+.toc ul{margin:0; padding:0; list-style:none; display:grid; gap:8px;}
+.toc li a{color:var(--ink); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:8px;}
+.toc li a::before{content:"→"; color:var(--sun); font-weight:800;}
+.toc li a:hover{text-decoration:underline; text-underline-offset:4px;}
+
+/* ---------- Article Content ---------- */
+article h2{font-size:clamp(1.6rem,4vw,2.2rem); margin:48px 0 20px; padding-bottom:12px; border-bottom:2px solid var(--line);}
+article h3{font-size:1.25rem; margin:32px 0 12px;}
+article ul, article ol{margin:0 0 24px; padding-left:20px; color:var(--muted);}
+article li{margin-bottom:8px;}
+article li strong{color:var(--ink);}
+article ol{padding-left: 24px;}
+article ol li { padding-left: 8px; }
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:.95rem;min-width:400px}
+th,td{padding:12px 16px;border-bottom:1px solid var(--line)}
+th{background:color-mix(in srgb, var(--card) 90%, var(--line));font-weight:600;color:var(--ink)}
+tr:last-child td{border-bottom:none}
+td{color:var(--muted);vertical-align:top}
+td strong{color:var(--ink);font-weight:600}
+td.num{text-align:right; font-variant-numeric: tabular-nums;}
+th.num{text-align:right;}
+
+/* Callout Boxes */
+.note{background:var(--card); border-left:4px solid var(--sun); padding:20px 24px; border-radius:0 12px 12px 0; margin:0 0 32px;}
+.note p{margin:0; color:var(--ink);}
+.note strong{color:var(--forest);}
+@media (prefers-color-scheme:dark){.note strong{color:var(--sun)}}
+
+/* Quote Block */
+.quote-block{background:color-mix(in srgb, var(--card) 70%, var(--line)); border-left:4px solid var(--forest); padding:20px 24px; border-radius:0 12px 12px 0; margin:0 0 32px; font-style:italic; color:var(--ink);}
+@media (prefers-color-scheme:dark){.quote-block{border-left-color:var(--sun)}}
+
+/* CTA Button */
+.cta-btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  background:var(--sun); color:#14201A; font-weight:700; font-size:1.1rem;
+  padding:16px 32px; border-radius:999px; text-decoration:none;
+  transition:filter .18s ease, transform .18s ease; margin:16px 0; width:100%;
+}
+.cta-btn:hover{filter:brightness(1.07); transform:translateY(-2px);}
+.cta-btn svg{flex:none;}
+.cta-wrap{text-align:center; margin:40px 0; padding:32px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
+
+/* Footer */
+footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font-size:.9rem; color:var(--muted);}
+
+@media(max-width:600px){
+  .article-wrap{padding:24px 18px 60px;}
+  .cta-btn{font-size:1rem; padding:14px 20px;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">NB</span>
+      <span>NB Studios</span>
+    </a>
+    <a class="back-link" href="blog.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to Blog
+    </a>
+  </div>
+</header>
+
+<main class="article-wrap">
+  <header class="hero">
+    <h1>How to Track Gym Expenses and Collections: A Practical Guide</h1>
+    <div class="meta">
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        October 24, 2026
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </span>
+    </div>
+    <p class="lede">Running a gym requires careful attention to both money coming in and money going out. Gym expense management software can help you organise business expenses, categorise spending, and review collections alongside recorded outflows.</p>
+  </header>
+
+  <nav class="toc">
+    <h4>Table of Contents</h4>
+    <ul>
+      <li><a href="#why-track">Why Should Gym Owners Track Expenses?</a></li>
+      <li><a href="#how-to-create">How to Create a Gym Expense Tracking System</a></li>
+      <li><a href="#how-gymhq">How GymHQ Helps Track Gym Expenses</a></li>
+      <li><a href="#example">Example: Monthly Gym Expense Summary</a></li>
+      <li><a href="#net-cash-flow">How to Calculate Net Cash Flow</a></li>
+      <li><a href="#best-practices">Best Practices for Financial Record-Keeping</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <p>Membership fees and other collections generate cash inflows, while rent, salaries, electricity, maintenance and equipment costs create outflows. If you track only membership collections, you may not have a clear picture of how much cash remains after paying operating expenses.</p>
+    <p>This guide explains how gym owners can improve financial record-keeping and how GymHQ can help.</p>
+
+    <h2 id="why-track">Why Should Gym Owners Track Expenses?</h2>
+    <p>A gym can collect substantial membership fees and still face financial pressure if its expenses are not monitored. Common operating expenses include:</p>
+    <ul>
+      <li>Rent and property charges</li>
+      <li>Staff salaries</li>
+      <li>Electricity and water</li>
+      <li>Cleaning and housekeeping</li>
+      <li>Equipment purchases and repairs</li>
+      <li>Internet and software</li>
+      <li>Marketing and advertising</li>
+      <li>Maintenance and miscellaneous costs</li>
+    </ul>
+    <p>When expenses are not recorded consistently, it becomes difficult to understand where money is being spent or compare costs between periods. Regular expense tracking provides a clearer view of recorded expenditure and helps you identify transactions that require review.</p>
+
+    <h2 id="how-to-create">How to Create a Gym Expense Tracking System</h2>
+
+    <h3>Step 1: Record Every Business Expense</h3>
+    <p>Create a record whenever your gym incurs or pays an expense, according to the purpose and accounting treatment of that transaction. Include the expense description, amount, date and payment method. Add vendor details and references where appropriate.</p>
+
+    <h3>Step 2: Use Meaningful Expense Categories</h3>
+    <p>Categories make it easier to group similar transactions. For example, you could use categories such as rent, staff salaries, electricity and utilities, cleaning, repairs, equipment, internet and miscellaneous expenses. Consistent categorisation makes reports more useful.</p>
+
+    <h3>Step 3: Retain Receipts and Invoices</h3>
+    <p>Keep supporting documents for expenses. These may include invoices, bills, payment slips and receipts. Record the relevant vendor information and reference number when available.</p>
+
+    <h3>Step 4: Review Spending Regularly</h3>
+    <p>Review expenses weekly or monthly, depending on the size of your gym. Compare major categories, investigate unusual changes and check whether all expected transactions have been recorded.</p>
+
+    <h3>Step 5: Compare Collections with Expenses</h3>
+    <p>Review money collected from members alongside recorded expenses for the same period. This helps you understand cash movement, although it should not be confused with accounting profit.</p>
+
+    <h2 id="how-gymhq">How GymHQ Helps Track Gym Expenses</h2>
+    <p>GymHQ includes an Expenses section designed for recording and reviewing business expenditure.</p>
+
+    <h3>1. Record Expense Details</h3>
+    <p>Each expense can contain: Expense title, Category, Amount, Transaction date, Payment method, Vendor or payee, Invoice or reference number, Notes, and Receipt or invoice photograph. For example, if you pay ₹3,000 for housekeeping, you can record the expense under the appropriate category, enter the date and payment method, and include the vendor's details.</p>
+
+    <h3>2. Attach Receipt Photographs</h3>
+    <p>Keeping supporting documents with expense records can make later verification more convenient. GymHQ provides options to take a photograph or attach an existing receipt or invoice image. This is useful when recording electricity bills, repair invoices, cleaning services and other routine business expenses.</p>
+
+    <h3>3. Review Category-Wise Expenses</h3>
+    <p>The Expenses screen provides a summary of recorded expenditure and displays major categories with their respective totals. This helps you identify which categories account for the largest share of your recorded spending.</p>
+
+    <h3>4. Search and Filter Expenses</h3>
+    <p>You can search expenses by title or vendor and filter them by available categories. These tools make it easier to locate a specific transaction without scrolling through the entire expense list.</p>
+
+    <h3>5. Export Expense Reports</h3>
+    <p>GymHQ's Reports section includes an Expenses by Category report. Available reports can be exported as CSV or PDF. CSV files can be opened in spreadsheet applications for further analysis, while PDFs are useful for retaining or sharing a report.</p>
+
+    <h3>6. View Cash Inflows and Outflows</h3>
+    <p>The GymHQ dashboard summarises recorded revenue, expenses and net cash flow for the selected period. Its Reports section also includes an Income vs Expenses (cash) report.</p>
+    <div class="note">
+      <p><strong>Note:</strong> These are cash-based summaries of recorded transactions, not a complete profit-and-loss statement. Accounting profit may differ because of accruals, depreciation, unpaid expenses, tax treatment and other accounting adjustments.</p>
+    </div>
+
+    <h2 id="example">Example: Monthly Gym Expense Summary</h2>
+    <p>Consider the following illustrative monthly figures for a gym.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Expense category</th>
+            <th class="num">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Rent</strong></td>
+            <td class="num">₹22,000</td>
+          </tr>
+          <tr>
+            <td><strong>Staff salaries</strong></td>
+            <td class="num">₹15,000</td>
+          </tr>
+          <tr>
+            <td><strong>Electricity and utilities</strong></td>
+            <td class="num">₹5,119</td>
+          </tr>
+          <tr>
+            <td><strong>Housekeeping</strong></td>
+            <td class="num">₹3,000</td>
+          </tr>
+          <tr>
+            <td><strong>Drinking water</strong></td>
+            <td class="num">₹600</td>
+          </tr>
+          <tr>
+            <td><strong>Repairs</strong></td>
+            <td class="num">₹850</td>
+          </tr>
+          <tr>
+            <td><strong>Other expenses</strong></td>
+            <td class="num">₹999</td>
+          </tr>
+          <tr style="background:color-mix(in srgb, var(--card) 80%, var(--line));">
+            <td><strong>Total expenses</strong></td>
+            <td class="num"><strong>₹47,568</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>By categorising these expenses, the owner can see which costs account for most of the recorded expenditure. These figures are illustrative and are not a representation of typical gym costs.</p>
+
+    <h2 id="net-cash-flow">How to Calculate Net Cash Flow</h2>
+    <p>A basic cash-flow calculation is:</p>
+    <div class="quote-block" style="text-align:center; font-size:1.2rem; font-weight:700;">
+      Net cash flow = Cash inflows − Cash outflows
+    </div>
+    <p>Suppose your gym records ₹60,000 in cash inflows and ₹47,568 in cash outflows during a period.</p>
+    <p>Net cash flow would be: <strong>₹60,000 − ₹47,568 = ₹12,432.</strong></p>
+    <p>This means recorded cash inflows exceeded recorded cash outflows by ₹12,432 during that period, assuming the figures include the relevant transactions. It does not automatically mean the gym earned ₹12,432 in accounting profit.</p>
+
+    <div class="cta-wrap">
+      <h2 style="margin-top:0; border:none; padding:0; font-size:1.8rem;">Start organising your gym's financial records.</h2>
+      <p>Choose the free plan for up to 25 members or explore paid plans when you need greater membership capacity.</p>
+      <a class="cta-btn" href="YOUR_PLAY_STORE_LINK_HERE" target="_blank" rel="noopener noreferrer" aria-label="Download GymHQ on Google Play">
+        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.1v17.8c0 .5.6.9 1 .6l14.3-8.9c.4-.3.4-.9 0-1.2L5 2.5c-.4-.3-1 .1-1 .6z" fill="currentColor"/></svg>
+        <span>Get GymHQ on <strong>Google Play</strong></span>
+      </a>
+    </div>
+
+    <h2 id="best-practices">Best Practices for Gym Financial Record-Keeping</h2>
+    <ul>
+      <li>Record transactions promptly.</li>
+      <li>Use consistent expense categories.</li>
+      <li>Retain relevant bills and receipts.</li>
+      <li>Review cash and bank transactions regularly.</li>
+      <li>Check that recorded payment methods match actual transactions.</li>
+      <li>Investigate duplicate or missing entries.</li>
+      <li>Back up important records.</li>
+      <li>Export reports when required for further review.</li>
+      <li>Consult an accountant for formal financial statements and tax-related matters.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Expense tracking is an important part of running a financially organised gym. By recording expenditure consistently, retaining receipts and reviewing category-wise totals, gym owners can better understand where their money goes.</p>
+    <p>GymHQ combines expense recording, receipt attachments, category-wise summaries, payment records and cash-based reports in one Android app.</p>
+
+  </article>
+</main>
+
+<footer>
+  <div class="article-wrap" style="padding-top:0; padding-bottom:0;">
+    &copy; <span id="y">2026</span> NB Studios. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+<!-- SEO Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Track Gym Expenses and Collections: A Practical Guide for Gym Owners",
+  "description": "Learn how to track gym expenses, rent, salaries, utilities and member collections. See how GymHQ helps organise expense records and reports.",
+  "author": {
+    "@type": "Organization",
+    "name": "NB Studios"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NB Studios",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.nbstudios.co.in/icon.png"
+    }
+  },
+  "datePublished": "2026-10-24",
+  "dateModified": "2026-10-24"
+}
+</script>
+</body>
+</html>
