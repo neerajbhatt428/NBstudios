@@ -95,12 +95,15 @@ article li strong{color:var(--ink);}
 .feature-highlight p{margin:0; font-size:.98rem; color:var(--muted);}
 
 /* Pricing Table */
-.pricing-table{width:100%; border-collapse:collapse; margin:24px 0 32px; font-size:.95rem;}
+.table-container {overflow-x: auto; margin: 24px 0 32px; border-radius: 12px; border: 1px solid var(--line);}
+.pricing-table{width:100%; border-collapse:collapse; font-size:.95rem; min-width: 600px; background: var(--card);}
 .pricing-table th, .pricing-table td{padding:16px; text-align:left; border-bottom:1px solid var(--line);}
-.pricing-table th{background:color-mix(in srgb, var(--card) 90%, var(--line)); font-weight:700; color:var(--ink);}
+.pricing-table th{background:color-mix(in srgb, var(--card) 90%, var(--line)); font-weight:700; color:var(--ink); white-space: nowrap;}
 .pricing-table td{color:var(--muted);}
-.pricing-table td strong{color:var(--ink);}
+.pricing-table td strong{color:var(--ink); font-weight: 700;}
 .pricing-table tr:last-child td{border-bottom:none;}
+.pricing-table .plan-name {font-weight:700; color:var(--ink); font-size:1.05rem; text-transform: capitalize;}
+.pricing-table .plan-id {font-size:.8rem; color:var(--muted); font-family:monospace; display:block; margin-top:2px;}
 
 /* CTA Button */
 .cta-btn{
@@ -129,7 +132,6 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
 @media(max-width:600px){
   .article-wrap{padding:24px 18px 60px;}
   .cta-btn{font-size:1rem; padding:16px 24px;}
-  .pricing-table th, .pricing-table td{padding:12px 8px;}
   .feature-highlight{padding:20px 16px;}
 }
 </style>
@@ -257,45 +259,80 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
     Add in the time you save (hours of manual ledger balancing), the cash you recover from outstanding balances (₹7,100 in the screenshot!), and the money you stop losing to untracked expenses. GymHQ isn't an expense; it's an investment in your gym's survival.</p>
 
     <h2 id="pricing">Plans for Every Size of Gym</h2>
-    <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you. You only pay for the active members you manage.</p>
+    <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you. We offer simple, transparent pricing based on the number of active members you manage. Choose a monthly, quarterly, or yearly plan.</p>
     
-    <table class="pricing-table">
-      <thead>
-        <tr>
-          <th>Plan</th>
-          <th>Capacity</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Free</strong></td>
-          <td>Up to 25 active members (1 Branch)</td>
-          <td>Free forever</td>
-        </tr>
-        <tr>
-          <td><strong>Starter</strong></td>
-          <td>Up to 100 active members (1 Branch)</td>
-          <td>₹200 / month</td>
-        </tr>
-        <tr>
-          <td><strong>Growth</strong></td>
-          <td>Up to 250 active members (2 Branches)</td>
-          <td>₹500 / month</td>
-        </tr>
-        <tr>
-          <td><strong>Pro</strong></td>
-          <td>Up to 500 active members (3 Branches)</td>
-          <td>₹1,000 / month</td>
-        </tr>
-        <tr>
-          <td><strong>Elite</strong></td>
-          <td>Up to 1000 active members (5 Branches)</td>
-          <td>₹2,000 / month</td>
-        </tr>
-      </tbody>
-    </table>
-    <p><em>Note: GymHQ also offers quarterly and yearly plans with discounts up to 9%. All payments are handled securely via Google Play.</em></p>
+    <div class="table-container">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Members</th>
+            <th>Branches</th>
+            <th>Monthly</th>
+            <th>Quarterly (3 mo)</th>
+            <th>Yearly (1 yr)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="plan-name">Free</span>
+              <span class="plan-id">free</span>
+            </td>
+            <td>25</td>
+            <td>1</td>
+            <td><strong>₹0</strong></td>
+            <td>₹0</td>
+            <td>₹0</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="plan-name">Starter</span>
+              <span class="plan-id">starter</span>
+            </td>
+            <td>100</td>
+            <td>1</td>
+            <td><strong>₹200</strong></td>
+            <td>₹550</td>
+            <td>₹2,000</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="plan-name">Growth</span>
+              <span class="plan-id">growth</span>
+            </td>
+            <td>250</td>
+            <td>2</td>
+            <td><strong>₹500</strong></td>
+            <td>₹1,400</td>
+            <td>₹5,000</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="plan-name">Pro</span>
+              <span class="plan-id">pro</span>
+            </td>
+            <td>500</td>
+            <td>3</td>
+            <td><strong>₹1,000</strong></td>
+            <td>₹2,750</td>
+            <td>₹10,000</td>
+          </tr>
+          <tr>
+            <td>
+              <span class="plan-name">Elite</span>
+              <span class="plan-id">elite</span>
+            </td>
+            <td>1,000</td>
+            <td>5</td>
+            <td><strong>₹2,000</strong></td>
+            <td>₹5,500</td>
+            <td>₹20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><em>Note: All payments are handled securely via Google Play. Upgrade or downgrade your plan at any time.</em></p>
 
     <div class="cta-wrap">
       <h2>Ready to Ditch the Register?</h2>
