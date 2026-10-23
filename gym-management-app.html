@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Master Guide to Gym Management Software | GymHQ</title>
-<meta name="description" content="The definitive guide to scaling your fitness business. Learn how to stop revenue leakage, track attendance, and manage expenses with GymHQ, the offline-first gym management app.">
-<link rel="canonical" href="https://www.nbstudios.co.in/gym-management-app.html">
+<title>GymHQ: Affordable Gym Management Software for Indian Gym Owners</title>
+<meta name="description" content="Manage Gym Members, Memberships, Payments, Expenses and Attendance with GymHQ. Affordable gym management software for Indian gym owners. Start free today.">
+<link rel="canonical" href="https://www.nbstudios.co.in/gymhq-india.html">
 <meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="The Master Guide to Gym Management: Stop Losing Money and Scale Your Business">
-<meta property="og:description" content="From revenue leakage to staff trust issues, discover how GymHQ solves the 6 biggest headaches for gym owners.">
-<meta property="og:url" content="https://www.nbstudios.co.in/gym-management-app.html">
+<meta property="og:title" content="GymHQ: Affordable Gym Management Software for Indian Gym Owners">
+<meta property="og:description" content="Manage members, memberships, payments, expenses, and attendance with one simple app. Plans start at just ₹0.">
+<meta property="og:url" content="https://www.nbstudios.co.in/gymhq-india.html">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Master Guide to Gym Management Software">
-<meta name="twitter:description" content="Track members, collect payments, and manage expenses with GymHQ. The offline-first app built for fitness business owners.">
+<meta name="twitter:title" content="GymHQ: Affordable Gym Management Software for Indian Gym Owners">
+<meta name="twitter:description" content="Manage members, memberships, payments, expenses, and attendance with one simple app. Plans start at just ₹0.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
 
@@ -29,21 +29,20 @@
   --radius:16px;
 }
 @media (prefers-color-scheme:dark){
-  --bg:#0E1A15; --ink:#E9F0EA; --forest:#0A2620; --muted:#9DB0A5; --line:#24372F; --card:#132620; --mint:#1A3A2E;
-  /* Fix for dark mode text visibility */
-  --heading-accent: #FFC93C;
+  :root{--bg:#0E1A15; --ink:#E9F0EA; --forest:#0A2620; --muted:#9DB0A5; --line:#24372F; --card:#132620; --mint:#1A3A2E}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--bg); color:var(--ink);
-  font:400 1.0625rem/1.75 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font:400 1.0625rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
 }
 h1,h2,h3,h4{line-height:1.2; margin:0; font-weight:800; letter-spacing:-0.02em;}
 p{margin:0 0 20px;}
 a{color:var(--ink); text-decoration-color:var(--sun); text-decoration-thickness:2px; text-underline-offset:3px;}
 a:hover{text-decoration-thickness:3px;}
+img,svg{max-width:100%; display:block;}
 
 /* ---------- Topbar ---------- */
 .topbar{
@@ -62,84 +61,69 @@ a:hover{text-decoration-thickness:3px;}
 /* ---------- Layout ---------- */
 .article-wrap{max-width:800px; margin:0 auto; padding:40px 24px 80px;}
 .hero{margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid var(--line);}
-.hero h1{font-size:clamp(2.4rem,6vw,3.4rem); margin-bottom:20px; letter-spacing:-.03em;}
+.hero h1{font-size:clamp(2rem,6vw,2.8rem); margin-bottom:16px; letter-spacing:-.03em;}
+.hero h2.subtitle{font-size:1.2rem; font-weight:500; color:var(--muted); margin:0 0 24px; letter-spacing:0;}
 .meta{display:flex; flex-wrap:wrap; gap:16px; font-size:.9rem; color:var(--muted); margin-bottom:24px;}
 .meta span{display:flex; align-items:center; gap:6px;}
-.lede{font-size:1.25rem; color:var(--muted); margin:0; font-weight:400; line-height:1.6;}
 
 /* ---------- Table of Contents ---------- */
-.toc{margin:0 0 48px; padding:24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
-.toc h4{margin:0 0 16px; font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);}
-.toc ul{margin:0; padding:0; list-style:none; display:grid; gap:12px;}
-.toc li a{color:var(--ink); text-decoration:none; font-weight:500; display:inline-flex; align-items:flex-start; gap:10px;}
-.toc li a::before{content:"→"; color:var(--sun); font-weight:800; line-height:1.5;}
+.toc{margin:0 0 40px; padding:20px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
+.toc h4{margin:0 0 12px; font-size:1rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted);}
+.toc ul{margin:0; padding:0; list-style:none; display:grid; gap:8px;}
+.toc li a{color:var(--ink); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:8px;}
+.toc li a::before{content:"→"; color:var(--sun); font-weight:800;}
 .toc li a:hover{text-decoration:underline; text-underline-offset:4px;}
 
 /* ---------- Article Content ---------- */
-article h2{font-size:clamp(1.7rem,4vw,2.3rem); margin:56px 0 24px; padding-bottom:12px; border-bottom:2px solid var(--line);}
-/* FIXED: H3 color is now var(--ink) so it's white in dark mode, and added a sun-colored accent */
-article h3{font-size:1.4rem; margin:36px 0 16px; color:var(--ink); display:flex; align-items:center; gap:10px;}
-article h3::before {content:"■"; color:var(--sun); font-size:1rem;}
-article ul, article ol{margin:0 0 24px; padding-left:24px; color:var(--muted);}
-article li{margin-bottom:12px; line-height:1.6;}
+article h2{font-size:clamp(1.6rem,4vw,2.2rem); margin:48px 0 20px; padding-bottom:12px; border-bottom:2px solid var(--line);}
+article h3{font-size:1.25rem; margin:32px 0 12px;}
+article ul, article ol{margin:0 0 24px; padding-left:20px; color:var(--muted);}
+article li{margin-bottom:8px;}
 article li strong{color:var(--ink);}
+article ol{padding-left: 24px;}
+article ol li { padding-left: 8px; }
+
+/* Tables */
+.table-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{width:100%;border-collapse:collapse;text-align:left;font-size:.95rem;min-width:500px}
+th,td{padding:12px 16px;border-bottom:1px solid var(--line)}
+th{background:color-mix(in srgb, var(--card) 90%, var(--line));font-weight:600;color:var(--ink)}
+tr:last-child td{border-bottom:none}
+td{color:var(--muted);vertical-align:top}
+td strong{color:var(--ink);font-weight:600}
 
 /* Callout Boxes */
-.problem-box{background:var(--card); border-left:4px solid #E74C3C; padding:24px; border-radius:0 12px 12px 0; margin:0 0 32px; box-shadow:0 4px 12px rgba(0,0,0,0.02);}
-.problem-box h3{margin:0 0 12px; color:#E74C3C; font-size:1.2rem; display:block;}
-.problem-box h3::before {content:none;}
-/* FIXED: Solution box text and background for dark mode */
-.solution-box{background:var(--card); border-left:4px solid var(--sun); padding:24px; border-radius:0 12px 12px 0; margin:32px 0; color:var(--ink);}
-.solution-box h3{margin:0 0 12px; color:var(--ink); font-size:1.2rem; display:block;}
-.solution-box h3::before {content:none;}
-.solution-box p:last-child{margin:0;}
-
-/* Feature Highlight */
-.feature-highlight{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px; margin:0 0 24px; transition:transform 0.2s ease;}
-.feature-highlight:hover{transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.04);}
-.feature-highlight h4{margin:0 0 12px; font-size:1.25rem; color:var(--ink); display:flex; align-items:center; gap:8px;}
-.feature-highlight h4::before{content:""; display:inline-block; width:12px; height:12px; background:var(--sun); border-radius:3px; flex:none;}
-.feature-highlight p{margin:0; font-size:.98rem; color:var(--muted);}
-
-/* Pricing Table */
-.table-container {overflow-x: auto; margin: 24px 0 32px; border-radius: 12px; border: 1px solid var(--line);}
-.pricing-table{width:100%; border-collapse:collapse; font-size:.95rem; min-width: 600px; background: var(--card);}
-.pricing-table th, .pricing-table td{padding:16px; text-align:left; border-bottom:1px solid var(--line);}
-.pricing-table th{background:color-mix(in srgb, var(--card) 90%, var(--line)); font-weight:700; color:var(--ink); white-space: nowrap;}
-.pricing-table td{color:var(--muted);}
-.pricing-table td strong{color:var(--ink); font-weight: 700;}
-.pricing-table tr:last-child td{border-bottom:none;}
-.pricing-table .plan-name {font-weight:700; color:var(--ink); font-size:1.05rem; text-transform: capitalize;}
-.pricing-table .plan-id {font-size:.8rem; color:var(--muted); font-family:monospace; display:block; margin-top:2px;}
+.note{background:var(--card); border-left:4px solid var(--sun); padding:20px 24px; border-radius:0 12px 12px 0; margin:0 0 32px;}
+.note p{margin:0; color:var(--ink);}
+.note strong{color:var(--forest);}
+@media (prefers-color-scheme:dark){.note strong{color:var(--sun)}}
 
 /* CTA Button */
 .cta-btn{
   display:inline-flex; align-items:center; justify-content:center; gap:10px;
   background:var(--sun); color:#14201A; font-weight:700; font-size:1.1rem;
-  padding:18px 36px; border-radius:999px; text-decoration:none;
+  padding:16px 32px; border-radius:999px; text-decoration:none;
   transition:filter .18s ease, transform .18s ease; margin:16px 0; width:100%;
 }
-.cta-btn:hover{filter:brightness(1.07); transform:translateY(-2px); box-shadow:0 10px 20px rgba(255,201,60,0.3);}
+.cta-btn:hover{filter:brightness(1.07); transform:translateY(-2px);}
 .cta-btn svg{flex:none;}
-.cta-wrap{text-align:center; margin:56px 0; padding:40px 24px; background:var(--forest); color:#F2F5F1; border-radius:var(--radius);}
-.cta-wrap h2{border:none; margin:0 0 12px; padding:0; color:#F2F5F1; font-size:2rem;}
-.cta-wrap p{color:#CFE3D8; margin-bottom:24px; font-size:1.1rem;}
+.cta-wrap{text-align:center; margin:40px 0; padding:32px 24px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius);}
 
 /* FAQ */
 details.faq{background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:12px; overflow:hidden;}
-details.faq summary{padding:20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; font-size:1.05rem;}
+details.faq summary{padding:16px 20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; color:var(--ink);}
 details.faq summary::-webkit-details-marker{display:none;}
-details.faq summary::after{content:"+"; font-size:1.4rem; color:var(--muted); transition:transform .2s ease; line-height:1;}
+details.faq summary::after{content:"+"; font-size:1.2rem; color:var(--muted); transition:transform .2s ease;}
 details.faq[open] summary::after{transform:rotate(45deg);}
 details.faq .faq-content{padding:0 20px 20px; color:var(--muted);}
+details.faq .faq-content p:last-child{margin:0;}
 
 /* Footer */
 footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font-size:.9rem; color:var(--muted);}
 
 @media(max-width:600px){
   .article-wrap{padding:24px 18px 60px;}
-  .cta-btn{font-size:1rem; padding:16px 24px;}
-  .feature-highlight{padding:20px 16px;}
+  .cta-btn{font-size:1rem; padding:14px 20px;}
 }
 </style>
 </head>
@@ -160,240 +144,389 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
 
 <main class="article-wrap">
   <header class="hero">
-    <h1>The Master Guide to Gym Management: Stop Losing Money and Scale Your Business</h1>
+    <h1>GymHQ: Affordable Gym Management Software for Indian Gym Owners</h1>
+    <h2 class="subtitle">Manage Gym Members, Memberships, Payments, Expenses and Attendance with One Simple App</h2>
     <div class="meta">
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        October 24, 2026
+        October 23, 2026
       </span>
       <span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        12 min read
+        10 min read
       </span>
     </div>
-    <p class="lede">Running a fitness business is physically demanding. Managing its admin shouldn't be a second full-time job. Discover exactly how GymHQ solves the 6 biggest headaches for gym owners with a beautiful, offline-first dashboard.</p>
   </header>
 
   <nav class="toc">
-    <h4>What's inside this guide</h4>
+    <h4>Table of Contents</h4>
     <ul>
-      <li><a href="#the-problem">The 6 Silent Killers of Gym Profitability</a></li>
-      <li><a href="#the-solution">Meet GymHQ: The Architecture of a Digital Gym</a></li>
-      <li><a href="#features">A Deep Dive into GymHQ's Engine</a></li>
-      <li><a href="#roi">The ROI of Gym Software (Why you can't afford NOT to have it)</a></li>
-      <li><a href="#pricing">Plans for Every Size of Gym</a></li>
+      <li><a href="#what-is">What Is GymHQ Gym Management Software?</a></li>
+      <li><a href="#why-need">Why Do Gym Owners Need Gym Management Software?</a></li>
+      <li><a href="#key-features">Key Features of GymHQ</a></li>
+      <li><a href="#pricing">GymHQ Pricing Plans in India</a></li>
+      <li><a href="#who-for">Who Should Use GymHQ?</a></li>
+      <li><a href="#vs-manual">Software vs. Manual Record Keeping</a></li>
+      <li><a href="#how-to-start">How to Get Started</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
     </ul>
   </nav>
 
   <article>
-    <p>You didn't open a gym to spend your evenings staring at an Excel spreadsheet or chasing people for a ₹1,500 renewal fee. You opened it because you love fitness, you want to build a community, and you want to build a profitable business.</p>
-    <p>But the reality of gym ownership is often a chaotic mix of paper registers, missing payments, staff trust issues, and a never-ending stream of administrative headaches. As your member count grows, the chaos multiplies. You become a slave to your front desk.</p>
-    <p>In this master guide, we are going to pull back the curtain on why gyms fail to scale. We will diagnose the exact points where you are losing money, and show you how digitizing your operations with <strong>GymHQ</strong>—a powerful, fully offline gym management app—can completely transform your business from a stressful daily grind into a well-oiled machine.</p>
+    <p>Running a gym involves much more than helping members achieve their fitness goals. Gym owners also need to manage memberships, collect fees, track outstanding payments, monitor expenses, record attendance, handle renewals and maintain accurate financial records.</p>
+    <p>When these tasks are managed manually using notebooks, spreadsheets or multiple applications, it becomes difficult to keep everything organised. Missed renewal dates, forgotten payment reminders and incomplete expense records can create unnecessary work for gym owners.</p>
+    <p><strong>GymHQ</strong> is a gym management software for Android designed to help gym owners manage their daily operations from their smartphones. From member registration and membership tracking to payment receipts, expense management and financial reports, GymHQ brings essential gym administration features together in one place.</p>
+    <p>Whether you run a small neighbourhood fitness centre, a growing gym or a multi-branch fitness business, GymHQ offers plans designed for different business sizes, including a free plan for gyms with up to 25 members.</p>
 
-    <h2 id="the-problem">The 6 Silent Killers of Gym Profitability</h2>
-    <p>Before we look at the solution, we need to diagnose the disease. Here are the most common problems that prevent gym owners from scaling their businesses.</p>
+    <h2 id="what-is">What Is GymHQ Gym Management Software?</h2>
+    <p>GymHQ is an Android-based gym management app that helps fitness business owners organise their daily administrative and financial activities.</p>
+    <p>Instead of maintaining separate records for members, membership fees, payments and expenses, you can use GymHQ to manage these records through dedicated sections within the app.</p>
+    <p>Its interface provides access to five main areas:</p>
+    <ul>
+      <li><strong>Home:</strong> View your gym's financial summary, member statistics, attendance and upcoming membership expirations.</li>
+      <li><strong>Members:</strong> Add members, manage their profiles, check membership status and track outstanding balances.</li>
+      <li><strong>Payments:</strong> Record member payments, view receipts and access payment history.</li>
+      <li><strong>Expenses:</strong> Record business expenses, organise them by category and track spending.</li>
+      <li><strong>Reports:</strong> Access reports covering memberships, collections, outstanding balances, expenses and financial ledgers.</li>
+    </ul>
+    <p>GymHQ also includes settings for membership packages, batches, branches, reminders, app security, data backups and other business preferences. The objective is simple: help gym owners spend less time managing paperwork and more time focusing on their members and business.</p>
+
+    <h2 id="why-need">Why Do Gym Owners Need Gym Management Software?</h2>
+    <p>As a gym grows, keeping track of every member and transaction becomes increasingly complicated. Consider some common challenges faced by gym owners:</p>
+
+    <h3>1. Keeping Track of Membership Expiry Dates</h3>
+    <p>Members join on different dates and purchase different membership plans. Some memberships are monthly, while others are quarterly, half-yearly or annual. Manually checking every membership can make it easy to miss renewal dates.</p>
+    <p>GymHQ displays membership status and highlights memberships that are expiring soon. The dashboard includes an upcoming-expiry section, while the Members area helps you identify active, expired and soon-to-expire memberships. You can also configure the number of days used for expiring-soon alerts.</p>
+
+    <h3>2. Tracking Pending Membership Fees</h3>
+    <p>A member may pay the full membership fee upfront, make a partial payment or have an outstanding balance. Without a proper record, it can be difficult to determine who has paid and who still owes money.</p>
+    <p>GymHQ lets you record payments against memberships and view the amount due, amount paid and remaining balance. Member profiles also display payment information, making it easier to identify pending dues. The dashboard can show the outstanding amount owed by members, while the Reports section provides an outstanding-balances report.</p>
+
+    <h3>3. Managing Gym Expenses</h3>
+    <p>Rent, electricity, staff salaries, cleaning, equipment repairs, internet bills and other operating costs affect a gym's financial performance. Recording these expenses accurately is important for understanding where the business's money goes.</p>
+    <p>With GymHQ, you can record expenses with details such as Expense title and category, Amount and transaction date, Payment method, Vendor or payee, Invoice or reference number, Additional notes, and Receipt or invoice photograph. You can also organise expenses into categories and review category-wise spending.</p>
+
+    <h3>4. Maintaining Attendance Records</h3>
+    <p>Attendance tracking helps gym owners understand which members are visiting the facility and how frequently they attend. GymHQ includes an attendance feature that allows you to mark members as present and review their recent visit history. The member profile displays attendance information, and the Home screen provides a summary of the day's attendance.</p>
+
+    <h3>5. Preparing Reports Without Manual Compilation</h3>
+    <p>Compiling member lists, payment records and expense summaries manually can take considerable time. GymHQ includes a dedicated Reports section with multiple report types covering different aspects of gym operations, including Membership reports, Payment and collection reports, Expense and financial reports, and a Subscription and capacity report. Reports can be exported as CSV or PDF.</p>
+
+    <h2 id="key-features">Key Features of GymHQ Gym Management App</h2>
     
-    <div class="problem-box">
-      <h3>1. The "Revenue Leakage" Nightmare</h3>
-      <p>How do you track who has paid and whose membership has expired? If you rely on a paper register or memory, you are bleeding money. Members whose memberships lapsed weeks ago are still walking in and working out for free. You lose track of who owes you money, and you waste hours every week chasing people down for payments.</p>
-    </div>
-    
-    <div class="problem-box">
-      <h3>2. The Trust Deficit with Front Desk Staff</h3>
-      <p>When you aren't at the gym, how do you know what is happening? Is your staff giving out free day-passes to their friends? Are they pocketing the cash from a new sign-up? Without a strict digital trail, you have zero visibility into your own business.</p>
-    </div>
-    
-    <div class="problem-box">
-      <h3>3. The "Black Hole" of Gym Expenses</h3>
-      <p>Most gym owners are great at tracking revenue, but terrible at tracking expenses. Between rent, staff salaries, electricity bills, equipment repairs, and buying water cans, your money disappears. If you don't have a strict ledger of where your cash is going, you might be busy but not actually profitable.</p>
-    </div>
-    
-    <div class="problem-box">
-      <h3>4. The Blind Spot of Member Churn</h3>
-      <p>Do you know when a member is about to quit? Usually, it’s after they haven’t shown up for two weeks. But without a digital attendance system, you won't notice they are gone until it’s time for them to renew—and by then, they’ve already joined the gym down the street.</p>
-    </div>
-    
-    <div class="problem-box">
-      <h3>5. The "Always On" Burnout</h3>
-      <p>Because your paperwork is physical, you can never truly leave the gym. If you go on vacation or take a day off, the front desk is in chaos. Your business is chained to a physical location and a binder full of paper.</p>
+    <h3>1. Centralised Member Management</h3>
+    <p>GymHQ provides a dedicated Members section for managing member information. You can add members, search by name, phone number or email, and filter records by membership status. Member profiles include contact information, membership plan and validity, status, amount paid and outstanding balance, attendance history, and payment-related actions.</p>
+
+    <h3>2. Membership Packages and Renewals</h3>
+    <p>GymHQ includes membership package management so you can configure reusable plans with fees and features. You can review membership validity, identify upcoming expirations and renew memberships through the member management workflow.</p>
+
+    <h3>3. Payment Recording and Digital Receipts</h3>
+    <p>GymHQ allows you to record member payments and maintain transaction details, including the payment date, payment method and reference information. The app also provides a receipt screen that displays details such as Receipt number, Payment amount, Member name, Associated membership, and Transaction reference. You can share receipts and attach a photograph of a payment slip.</p>
+
+    <h3>4. Expense Tracking with Receipt Attachments</h3>
+    <p>GymHQ is not limited to tracking membership income. It also helps you record the money your gym spends. Each expense can include its category, amount, date, payment method, vendor information and notes, as well as a photograph of a receipt.</p>
+
+    <h3>5. Dashboard with Important Business Information</h3>
+    <p>GymHQ's Home screen brings together several operational and financial indicators, including Revenue recorded during the selected period, Expenses, Net cash flow, Outstanding member balances, Total members, Active members, Members expiring soon, Today's attendance, and Members requiring reminders.</p>
+    <div class="note">
+      <p><strong>Important:</strong> Net cash flow in GymHQ is a cash-based summary of recorded transactions, not the same as accounting profit. Understanding this distinction helps you interpret the dashboard correctly.</p>
     </div>
 
-    <h2 id="the-solution">Meet GymHQ: The Architecture of a Digital Gym</h2>
-    <p>We built <strong>GymHQ</strong> after talking to dozens of gym owners who were exhausted by complicated, expensive software that required a constant internet connection and forced them to upload sensitive member data to a cloud server.</p>
-    <p>GymHQ is an <strong>offline-first Android app</strong>. It is designed to be fast, incredibly easy to use, and 100% private. All your data is stored securely on your phone. You don't need Wi-Fi to check someone in or collect a payment.</p>
-    <p>But beneath the beautiful interface is an <strong>enterprise-grade architecture</strong>. We built GymHQ with a strict separation of layers: your financial rules are kept pure and secure, completely isolated from the UI. This means the app is lightning-fast, mathematically flawless, and will never lose your data.</p>
+    <h3>6. Attendance and Batch Management</h3>
+    <p>Different gyms operate different schedules, such as morning and evening sessions. GymHQ includes batch management for organising members into time slots. When attendance tracking is enabled, you can record daily visits and view recent attendance information in member profiles.</p>
 
-    <div class="solution-box">
-      <h3>The Command Center Dashboard</h3>
-      <p>Look at the GymHQ Home screen. It isn't just a list of buttons; it's a snapshot of your business's health. In one glance, you see your <strong>Net Cash Flow</strong>. You know exactly how much revenue you've collected (e.g., ₹57,700), what your expenses are (e.g., ₹47,568), and—crucially—how much is <strong>still owed by members today</strong> (e.g., ₹7,100). No more guessing.</p>
-    </div>
+    <h3>7. Reminders for Payments and Membership Renewals</h3>
+    <p>GymHQ includes reminder-related features for payment dues, renewals and expired memberships. The app also provides message templates for welcome messages, reminders and thank-you messages.</p>
 
-    <h2 id="features">A Deep Dive into GymHQ's Engine</h2>
-    <p>We didn't just build a basic calculator. We built a system designed to handle the complex edge cases of gym management. Here is how GymHQ solves the hardest problems:</p>
+    <h3>8. Multi-Branch Gym Management</h3>
+    <p>Gym owners planning to expand may need to manage multiple branches. GymHQ offers different subscription plans with varying branch limits. The app includes branch management settings for managing and switching between gym branches.</p>
 
-    <h3>1. Bank-Grade Financial Accuracy</h3>
-    <div class="feature-highlight">
-      <h4>Zero Rounding Errors & The "Reverse" Feature</h4>
-      <p>GymHQ calculates all money in exact paise (never floating points), so your totals always balance to the last decimal. When a member pays, you generate a <strong>digital receipt</strong>. If you make a mistake (e.g., typed ₹1,000 instead of ₹1,500), you don't just delete it—you use our unique <strong>"Reverse" feature</strong>. This keeps both the original entry and the reversal visible, ensuring your accounting history is legally airtight and your books always balance.</p>
-    </div>
+    <h3>9. Data Backup and Recovery Options</h3>
+    <p>GymHQ includes a Backup & Data section for backing up, restoring or deleting data. It also provides an automatic-backup setting. Owners should configure their backup preferences and periodically verify that backups are available and restorable.</p>
 
-    <h3>2. Smart Status Tracking (Membership vs. Payment)</h3>
-    <div class="feature-highlight">
-      <h4>Expired but Paid? Active but Unpaid?</h4>
-      <p>Other software confuses your membership status with your payment status. GymHQ treats them completely independently. You can clearly see who is <strong>Active but owes money</strong> (Partially Paid), and who is <strong>Expired but fully paid</strong>. Furthermore, the app is time-zone safe. A membership expiring on the 31st will not accidentally expire on the 30th due to daylight savings or travel.</p>
-    </div>
+    <h3>10. Customisation and App Security</h3>
+    <p>GymHQ provides settings that allow you to configure different aspects of your gym's operations. Available options include Gym name and contact details, Membership packages, Expense categories, Batches and branches, Expiring-soon alerts, Appearance preferences, App lock, Activity log, and Backup settings. The app also includes an activity log to help review recorded changes.</p>
 
-    <h3>3. Built-in Member Freezes & Advances</h3>
-    <div class="feature-highlight">
-      <h4>Handling the Real World</h4>
-      <p>If a member goes on vacation or gets injured, GymHQ allows you to <strong>Freeze</strong> their membership. The app automatically extends their expiry date by the exact number of frozen days. Also, if a member pays early, that money is held as an <strong>Advance</strong> and automatically applied to their next renewal without messing up your current month's cash flow.</p>
-    </div>
+    <h2 id="pricing">GymHQ Pricing Plans: Affordable Gym Management Software in India</h2>
+    <p>One of the biggest concerns for small gym owners is the cost of business software. Expensive subscriptions may not be practical for a new gym or a fitness centre with a limited number of members. GymHQ offers five plans, ranging from a free option to a plan designed for larger gyms.</p>
 
-    <h3>4. Multi-Branch Management & Messaging</h3>
-    <div class="feature-highlight">
-      <h4>Scale Your Empire</h4>
-      <p>If you own multiple gym locations, GymHQ has you covered. You can seamlessly switch between branches, and all limits are counted across your entire business. Plus, you can send pre-filled <strong>WhatsApp or SMS reminders</strong> for payment dues or renewals with a single tap, using your own customized message templates.</p>
-    </div>
-
-    <h3>5. Zero-Permission Photo Receipts</h3>
-    <div class="feature-highlight">
-      <h4>Secure & Private by Design</h4>
-      <p>Need to attach a photo of a physical receipt or a member's profile? GymHQ uses Android's system Photo Picker. This means <strong>we never ask for full access to your phone's gallery or camera</strong>. The app only gets access to the exact photo you select. Plus, there is a built-in crop editor to keep your member profiles looking sharp.</p>
-    </div>
-
-    <h3>6. Enterprise-Grade Security & Automated Backups</h3>
-    <div class="feature-highlight">
-      <h4>Total Peace of Mind</h4>
-      <p>Your PIN is protected with bank-grade PBKDF2 hashing. You can lock the app with a fingerprint (using Android's secure BiometricPrompt), and the app blocks screenshots in the recent apps menu for ultimate privacy. Worried about losing your phone? GymHQ features <strong>Automatic Backups</strong>. You can configure the app to save your entire database to your Google Drive or Dropbox daily, weekly, or monthly. Plus, an Activity Log tracks exactly which staff member changed or deleted a record.</p>
-    </div>
-
-    <h2 id="roi">The ROI of Gym Software: Why You Can't Afford NOT to Have It</h2>
-    <p>Many gym owners hesitate to spend money on software. But let's do the math. If your monthly membership is ₹1,500, and GymHQ helps you stop just <strong>two members</strong> from slipping away due to an expired membership (which you didn't notice), the app has already paid for itself. 
-    <br><br>
-    Add in the time you save (hours of manual ledger balancing), the cash you recover from outstanding balances, and the money you stop losing to untracked expenses. GymHQ isn't an expense; it's an investment in your gym's survival.</p>
-
-    <h2 id="pricing">Plans for Every Size of Gym</h2>
-    <p>Unlike other software that charges massive monthly fees from day one, GymHQ is designed to grow with you. We offer simple, transparent pricing based on the number of active members you manage. Choose a monthly, quarterly, or yearly plan.</p>
-    
-    <div class="table-container">
-      <table class="pricing-table">
+    <div class="table-wrap">
+      <table>
         <thead>
           <tr>
             <th>Plan</th>
-            <th>Members</th>
-            <th>Branches</th>
+            <th>Member limit</th>
+            <th>Branch limit</th>
             <th>Monthly</th>
-            <th>Quarterly (3 mo)</th>
-            <th>Yearly (1 yr)</th>
+            <th>Quarterly (3 months)</th>
+            <th>Yearly (12 months)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
-              <span class="plan-name">Free</span>
-              <span class="plan-id">free</span>
-            </td>
+            <td><strong>Free</strong></td>
             <td>25</td>
             <td>1</td>
-            <td><strong>₹0</strong></td>
+            <td>₹0</td>
             <td>₹0</td>
             <td>₹0</td>
           </tr>
           <tr>
-            <td>
-              <span class="plan-name">Starter</span>
-              <span class="plan-id">starter</span>
-            </td>
+            <td><strong>Starter</strong></td>
             <td>100</td>
             <td>1</td>
-            <td><strong>₹200</strong></td>
+            <td>₹200</td>
             <td>₹550</td>
             <td>₹2,000</td>
           </tr>
           <tr>
-            <td>
-              <span class="plan-name">Growth</span>
-              <span class="plan-id">growth</span>
-            </td>
+            <td><strong>Growth</strong></td>
             <td>250</td>
             <td>2</td>
-            <td><strong>₹500</strong></td>
+            <td>₹500</td>
             <td>₹1,400</td>
             <td>₹5,000</td>
           </tr>
           <tr>
-            <td>
-              <span class="plan-name">Pro</span>
-              <span class="plan-id">pro</span>
-            </td>
+            <td><strong>Pro</strong></td>
             <td>500</td>
             <td>3</td>
-            <td><strong>₹1,000</strong></td>
+            <td>₹1,000</td>
             <td>₹2,750</td>
             <td>₹10,000</td>
           </tr>
           <tr>
-            <td>
-              <span class="plan-name">Elite</span>
-              <span class="plan-id">elite</span>
-            </td>
+            <td><strong>Elite</strong></td>
             <td>1,000</td>
             <td>5</td>
-            <td><strong>₹2,000</strong></td>
+            <td>₹2,000</td>
             <td>₹5,500</td>
             <td>₹20,000</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p><em>Note: All payments are handled securely via Google Play. You only pay for active members. Expired or archived members don't count against your limit.</em></p>
+    <p>Prices are in Indian rupees. Member and branch limits depend on the selected plan. Check the app for the applicable subscription terms.</p>
+
+    <h3>Which GymHQ Plan Should You Choose?</h3>
+    <ul>
+      <li><strong>Free Plan — For small gyms and beginners:</strong> Supports up to 25 members and one branch at ₹0. A useful starting point to explore digital member and payment management.</li>
+      <li><strong>Starter Plan — For growing neighbourhood gyms:</strong> Supports up to 100 members and one branch. At ₹200 per month, it is designed for owners who have outgrown a basic notebook but need an affordable solution.</li>
+      <li><strong>Growth Plan — For expanding fitness centres:</strong> Supports up to 250 members and two branches. At ₹500 per month, it is suitable for a gym that needs more capacity or operates across two locations.</li>
+      <li><strong>Pro Plan — For established gyms:</strong> Supports up to 500 members and three branches at ₹1,000 per month.</li>
+      <li><strong>Elite Plan — For larger gyms and multi-branch businesses:</strong> Supports up to 1,000 members and five branches at ₹2,000 per month.</li>
+    </ul>
+
+    <h3>Save More with Quarterly and Yearly Plans</h3>
+    <p>GymHQ's longer subscription options cost less than paying the monthly rate for every month in the same period.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Monthly billing over 12 months</th>
+            <th>Yearly price</th>
+            <th>Annual saving</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Starter</strong></td>
+            <td>₹2,400</td>
+            <td>₹2,000</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td><strong>Growth</strong></td>
+            <td>₹6,000</td>
+            <td>₹5,000</td>
+            <td>₹1,000</td>
+          </tr>
+          <tr>
+            <td><strong>Pro</strong></td>
+            <td>₹12,000</td>
+            <td>₹10,000</td>
+            <td>₹2,000</td>
+          </tr>
+          <tr>
+            <td><strong>Elite</strong></td>
+            <td>₹24,000</td>
+            <td>₹20,000</td>
+            <td>₹4,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>If your gym has a stable membership base and you plan to use the software throughout the year, a longer subscription may offer better value.</p>
+
+    <h2 id="who-for">Who Should Use GymHQ?</h2>
+    <p>GymHQ is designed for gym owners and fitness businesses that need a convenient way to organise everyday administration. It may be suitable for:</p>
+    <ul>
+      <li><strong>New gym owners:</strong> Start with a free plan for up to 25 members.</li>
+      <li><strong>Independent gym owners:</strong> Manage membership details, payments and expenses in one app.</li>
+      <li><strong>Small fitness centres:</strong> Track membership renewals and pending fees.</li>
+      <li><strong>Growing gyms:</strong> Choose a plan with a higher member limit.</li>
+      <li><strong>Multi-branch gym operators:</strong> Select a plan with the required branch capacity.</li>
+      <li><strong>Gym administrators:</strong> Maintain attendance, member records and payment information.</li>
+      <li><strong>Fitness business owners:</strong> Review collections, expenses and financial reports.</li>
+    </ul>
+    <p>If you currently manage your gym using notebooks, spreadsheets or several disconnected tools, GymHQ offers a way to bring many routine tasks into one mobile application.</p>
+
+    <h2 id="vs-manual">Gym Management Software vs. Manual Record Keeping</h2>
+    <p>Why consider switching from manual records to a gym management app?</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Activity</th>
+            <th>Manual method</th>
+            <th>Using GymHQ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Member records</strong></td>
+            <td>Search through notebooks or spreadsheets</td>
+            <td>Search member profiles within the app</td>
+          </tr>
+          <tr>
+            <td><strong>Membership expiry</strong></td>
+            <td>Check dates manually</td>
+            <td>Review expiring-soon membership indicators</td>
+          </tr>
+          <tr>
+            <td><strong>Payment tracking</strong></td>
+            <td>Maintain separate payment records</td>
+            <td>Record payments and view balances</td>
+          </tr>
+          <tr>
+            <td><strong>Receipts</strong></td>
+            <td>Prepare or maintain receipts separately</td>
+            <td>View and share digital payment receipts</td>
+          </tr>
+          <tr>
+            <td><strong>Expense management</strong></td>
+            <td>Maintain a separate expense register</td>
+            <td>Record expenses with categories and attachments</td>
+          </tr>
+          <tr>
+            <td><strong>Attendance</strong></td>
+            <td>Use a register or spreadsheet</td>
+            <td>Mark attendance and review visit history</td>
+          </tr>
+          <tr>
+            <td><strong>Financial reports</strong></td>
+            <td>Compile figures manually</td>
+            <td>Generate available reports and export them</td>
+          </tr>
+          <tr>
+            <td><strong>Multiple branches</strong></td>
+            <td>Maintain separate records or processes</td>
+            <td>Choose a plan with the required branch capacity</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The biggest advantage is having related information organised in one place. The exact time saved will depend on your gym's size, existing processes and how consistently you maintain your records.</p>
+
+    <h2 id="how-to-start">How to Get Started with GymHQ</h2>
+    <p>Getting started is straightforward:</p>
+    <ol>
+      <li><strong>Download GymHQ:</strong> Visit the GymHQ listing on Google Play and install the Android app.</li>
+      <li><strong>Set up your gym:</strong> Enter your gym's business information and configure relevant settings.</li>
+      <li><strong>Create membership packages:</strong> Set up the membership plans you offer, including the applicable fees and validity periods.</li>
+      <li><strong>Add your members:</strong> Create member profiles and enter the relevant contact and membership details.</li>
+      <li><strong>Record payments and expenses:</strong> Start recording member collections and business expenses so that your financial records remain organised.</li>
+      <li><strong>Use attendance and reminders:</strong> Configure batches if required, mark member attendance and review upcoming membership expirations or payment dues.</li>
+      <li><strong>Review reports:</strong> Use the dashboard and Reports section to monitor member activity, collections, outstanding balances and expenses.</li>
+      <li><strong>Choose the appropriate subscription:</strong> Start with the Free plan if it meets your requirements. Upgrade when you need a higher member limit or additional branch capacity.</li>
+    </ol>
 
     <div class="cta-wrap">
-      <h2>Ready to Ditch the Register?</h2>
-      <p>Take back your time and start running your gym like a real business. Download GymHQ today and see the difference.</p>
+      <h2 style="margin-top:0; border:none; padding:0; font-size:1.8rem;">Ready to Manage Your Gym Smarter?</h2>
+      <p>Stop relying entirely on scattered records. Explore GymHQ and find a plan that fits your gym's needs.</p>
       <a class="cta-btn" href="YOUR_PLAY_STORE_LINK_HERE" target="_blank" rel="noopener noreferrer" aria-label="Download GymHQ on Google Play">
         <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3.1v17.8c0 .5.6.9 1 .6l14.3-8.9c.4-.3.4-.9 0-1.2L5 2.5c-.4-.3-1 .1-1 .6z" fill="currentColor"/></svg>
         <span>Get GymHQ on <strong>Google Play</strong></span>
       </a>
     </div>
 
-    <h2 id="faq">Frequently Asked Questions</h2>
+    <h2 id="faq">Frequently Asked Questions About GymHQ</h2>
     
     <details class="faq">
-      <summary>Does GymHQ require an internet connection?</summary>
+      <summary>1. Is GymHQ free to use?</summary>
       <div class="faq-content">
-        <p>No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down. The internet is only needed if you choose to back up your data to the cloud or when you upgrade your subscription via Google Play.</p>
+        <p>Yes. GymHQ offers a Free plan priced at ₹0, with a limit of 25 members and one branch. Paid plans are available for gyms that require more capacity.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>Is my members' data safe and private?</summary>
+      <summary>2. What is the best gym management app for small gyms in India?</summary>
       <div class="faq-content">
-        <p>Absolutely. Unlike other apps, your members' personal data is never uploaded to our servers. It is stored securely in an isolated database on your Android device. You can also enable an App Lock (PIN or Fingerprint), and we use bank-grade hashing so your PIN is never stored in plain text.</p>
+        <p>The best app depends on your budget, member capacity and required features. GymHQ is an option for small Indian gyms looking for member management, membership tracking, payment recording, expense tracking, attendance and reporting in an Android app.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>What happens if I edit a membership package's price?</summary>
+      <summary>3. Can I track gym membership expiry dates with GymHQ?</summary>
       <div class="faq-content">
-        <p>GymHQ freezes the financial charge at the exact moment a membership is created. If you change the price of a "Monthly Plan" later, it will not alter the history or balances of members who already purchased it. Your historical data is always safe.</p>
+        <p>Yes. GymHQ displays membership validity and provides an expiring-soon section on the dashboard. You can also review upcoming expirations in the Members area.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>Can my front desk staff use the app?</summary>
+      <summary>4. Can GymHQ track pending membership fees?</summary>
       <div class="faq-content">
-        <p>Yes. You can set up a separate Staff PIN with limited access. Your staff can check members in and mark payments received, but they won't be able to view your overall revenue, business expenses, or profit reports. Plus, the built-in Activity Log tells you exactly who did what and when.</p>
+        <p>Yes. You can record payments against memberships and review the amount due, amount paid and remaining balance. The dashboard and outstanding-balances report help you identify dues that require attention.</p>
       </div>
     </details>
 
     <details class="faq">
-      <summary>How do I move my data to a new phone?</summary>
+      <summary>5. Can I record gym expenses?</summary>
       <div class="faq-content">
-        <p>Using the Automatic Backup feature, you can save a secure, zipped backup file (which includes your database and photos) to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that file. The app validates the backup before restoring to ensure your data is safe.</p>
+        <p>Yes. GymHQ allows you to record expense titles, categories, amounts, dates, payment methods, vendor details, references, notes and receipt photographs.</p>
       </div>
     </details>
+
+    <details class="faq">
+      <summary>6. Does GymHQ support attendance management?</summary>
+      <div class="faq-content">
+        <p>Yes. GymHQ includes attendance tracking, recent visit information and batch management settings.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>7. Can I manage multiple gym branches?</summary>
+      <div class="faq-content">
+        <p>Yes. GymHQ offers subscription plans with different branch limits. The available limits are one branch for Free and Starter, two for Growth, three for Pro and five for Elite.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>8. Can I export gym reports?</summary>
+      <div class="faq-content">
+        <p>Yes. The Reports section supports CSV and PDF exports for available reports, helping you retain and review business information.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>9. Can I back up my gym data?</summary>
+      <div class="faq-content">
+        <p>GymHQ includes Backup & Data options for backing up and restoring data, as well as an automatic-backup setting. Configure the available backup options and verify that your backups can be restored.</p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>10. Is GymHQ suitable for a gym with 500 or more members?</summary>
+      <div class="faq-content">
+        <p>Yes. The Pro plan supports up to 500 members, while the Elite plan supports up to 1,000 members. The appropriate choice depends on your member count and branch requirements.</p>
+      </div>
+    </details>
+
+    <h2>Final Verdict: Simplify Your Gym Administration with GymHQ</h2>
+    <p>Managing a gym should not mean spending hours searching for payment entries, checking membership expiry dates or compiling expense records.</p>
+    <p>A well-organised gym management app can help you keep track of members, membership plans, collections, outstanding balances, expenses, attendance and reports from a single place. GymHQ brings these essential tools together in an Android app with pricing options for different gym sizes.</p>
+    <p>Whether you operate a small local gym or manage a growing fitness business, GymHQ is designed to help make your daily gym administration more organised.</p>
 
   </article>
 </main>
@@ -415,8 +548,8 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
   "@graph": [
     {
       "@type": "Article",
-      "headline": "The Master Guide to Gym Management: Stop Losing Money and Scale Your Business",
-      "description": "The definitive guide to scaling your fitness business. Learn how to stop revenue leakage, track attendance, and manage expenses with GymHQ, the offline-first gym management app.",
+      "headline": "GymHQ: Affordable Gym Management Software for Indian Gym Owners",
+      "description": "Manage Gym Members, Memberships, Payments, Expenses and Attendance with GymHQ. Affordable gym management software for Indian gym owners. Start free today.",
       "author": {
         "@type": "Organization",
         "name": "NB Studios"
@@ -429,42 +562,90 @@ footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font
           "url": "https://www.nbstudios.co.in/icon.png"
         }
       },
-      "datePublished": "2026-10-24",
-      "dateModified": "2026-10-24"
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23"
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Does GymHQ require an internet connection?",
+          "name": "Is GymHQ free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. GymHQ is built offline-first. You can manage members, collect payments, and check people in even if your Wi-Fi goes down."
+            "text": "Yes. GymHQ offers a Free plan priced at ₹0, with a limit of 25 members and one branch. Paid plans are available for gyms that require more capacity."
           }
         },
         {
           "@type": "Question",
-          "name": "Is my members' data safe and private?",
+          "name": "What is the best gym management app for small gyms in India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Your members' personal data is never uploaded to our servers. It is stored securely and locally on your Android device. You can also enable an App Lock."
+            "text": "The best app depends on your budget, member capacity and required features. GymHQ is an option for small Indian gyms looking for member management, membership tracking, payment recording, expense tracking, attendance and reporting in an Android app."
           }
         },
         {
           "@type": "Question",
-          "name": "Can my front desk staff use the app?",
+          "name": "Can I track gym membership expiry dates with GymHQ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can set up a separate Staff PIN with limited access. Your staff can check members in and mark payments received, but they won't be able to view your overall revenue or profit reports."
+            "text": "Yes. GymHQ displays membership validity and provides an expiring-soon section on the dashboard. You can also review upcoming expirations in the Members area."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I move my data to a new phone?",
+          "name": "Can GymHQ track pending membership fees?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Using the Automatic Backup feature, you can save a secure backup file to Google Drive, Dropbox, or your SD card. When you get a new phone, simply install GymHQ and restore from that backup file."
+            "text": "Yes. You can record payments against memberships and review the amount due, amount paid and remaining balance. The dashboard and outstanding-balances report help you identify dues that require attention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I record gym expenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. GymHQ allows you to record expense titles, categories, amounts, dates, payment methods, vendor details, references, notes and receipt photographs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does GymHQ support attendance management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. GymHQ includes attendance tracking, recent visit information and batch management settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage multiple gym branches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. GymHQ offers subscription plans with different branch limits. The available limits are one branch for Free and Starter, two for Growth, three for Pro and five for Elite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export gym reports?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Reports section supports CSV and PDF exports for available reports, helping you retain and review business information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I back up my gym data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GymHQ includes Backup & Data options for backing up and restoring data, as well as an automatic-backup setting. Configure the available backup options and verify that your backups can be restored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GymHQ suitable for a gym with 500 or more members?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Pro plan supports up to 500 members, while the Elite plan supports up to 1,000 members. The appropriate choice depends on your member count and branch requirements."
           }
         }
       ]
