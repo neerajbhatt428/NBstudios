@@ -99,6 +99,7 @@ td strong{color:var(--ink);font-weight:600}
 .contact-card code{font-family:var(--mono);font-size:.86rem;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;color:var(--sun)}
 
 footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.88rem;color:var(--muted)}
+footer a { font-weight: 600; }
 
 @media print{
   .topbar,.toc,.back-link,footer{display:none}
@@ -141,6 +142,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-si
       <span class="chip">Updated: 19 Oct 2026</span>
     </div>
     <p class="lede"><strong>Your documents never leave your device.</strong> PDF Reader &amp; Editor opens, edits and saves PDFs entirely on your phone or tablet. There is no account, no sign-in and no server of ours that receives your files.</p>
+    
+    <!-- ADDED TERMS OF SERVICE LINK HERE -->
+    <p style="font-size: 0.9rem; color: var(--muted); margin-top: 12px;">
+      By using this app, you agree to our <a href="terms-pdfreader.html" style="font-weight: 600; text-decoration-color: var(--sun);">Terms of Service</a>.
+    </p>
 
     <details class="toc" open>
       <summary>On this page</summary>
@@ -289,7 +295,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-si
 </div>
 
 <footer>
-  <div class="wrap">&copy; <span id="y">2026</span> NB Studios. All rights reserved.</div>
+  <div class="wrap">
+    &copy; <span id="y">2026</span> NB Studios. All rights reserved. &middot; 
+    <!-- ADDED TERMS OF SERVICE LINK TO FOOTER -->
+    <a href="terms-pdfreader.html">Terms of Service</a>
+  </div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
