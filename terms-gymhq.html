@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service – GymHQ | NB Studios</title>
+<meta name="description" content="Terms of Service for GymHQ by NB Studios.">
+<meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
+<style>
+:root{
+  --bg:#F2F5F1;--ink:#14201A;--forest:#12332B;--mint:#BFE3D0;--sun:#FFC93C;
+  --muted:#52615A;--line:#D5DDD6;--card:#FFFFFF;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1A15;--ink:#E9F0EA;--forest:#0A2620;--muted:#9DB0A5;--line:#24372F;--card:#132620;--mint:#1A3A2E}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 1rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:var(--ink);text-decoration-color:var(--sun);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:3px}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:900px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;text-decoration:none;font-size:1rem}
+.brand-mark{width:28px;height:28px;border-radius:8px;background:var(--forest);color:var(--sun);display:grid;place-items:center;font-weight:800;font-size:.8rem;flex:none}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:500;text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px;border:1px solid var(--line);transition:background .15s ease,color .15s ease}
+.back-link:hover{background:var(--card);color:var(--ink);text-decoration:none}
+.back-link svg{flex:none}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+.hero{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin:0 0 16px;line-height:1.1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:.85rem;color:var(--muted);margin-bottom:20px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);padding:5px 12px;border-radius:999px;font-weight:500}
+.chip strong{color:var(--ink);font-weight:600}
+.lede{font-size:1.05rem;color:var(--muted);max-width:640px;margin:0}
+
+.toc{margin:32px 0 0;padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.toc summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;align-items:center;gap:8px;color:var(--ink);user-select:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:"+";margin-left:auto;font-size:1.15rem;font-weight:500;color:var(--muted);transition:transform .2s ease}
+.toc[open] summary::after{transform:rotate(45deg)}
+.toc ol{margin:14px 0 0;padding:0 0 0 4px;list-style:none;display:grid;gap:6px;grid-template-columns:1fr;counter-reset:toc}
+@media(min-width:640px){.toc ol{grid-template-columns:1fr 1fr;column-gap:24px}}
+.toc li{counter-increment:toc;font-size:.92rem}
+.toc li a{display:inline-flex;gap:10px;color:var(--muted);text-decoration:none;padding:3px 0;transition:color .15s ease}
+.toc li a::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--sun);background:color-mix(in srgb,var(--sun) 14%,transparent);padding:2px 6px;border-radius:5px;flex:none}
+.toc li a:hover{color:var(--ink)}
+
+article{padding:8px 0 80px}
+article section{padding:32px 0 0}
+article h2{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+article h2 .num{font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--forest);background:var(--mint);padding:4px 8px;border-radius:6px;flex:none}
+@media (prefers-color-scheme:dark){article h2 .num{color:var(--sun);background:var(--mint)}}
+article p{color:var(--muted);margin:0 0 14px}
+article p strong{color:var(--ink);font-weight:600}
+article ul{margin:0 0 16px;padding:0;list-style:none}
+article ul li{position:relative;padding:6px 0 6px 28px;color:var(--muted)}
+article ul li::before{content:"";position:absolute;left:6px;top:1.05em;width:7px;height:7px;border-radius:50%;background:var(--sun)}
+article ul li strong{color:var(--ink);font-weight:600}
+
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--sun);border-radius:12px;padding:16px 20px;margin:0 0 20px;font-size:.95rem;color:var(--ink)}
+.note p{margin:0;color:var(--ink)}
+.note strong{color:var(--forest)}
+@media (prefers-color-scheme:dark){.note strong{color:var(--sun)}}
+
+.contact-card{margin-top:32px;padding:24px;background:var(--forest);color:#F2F5F1;border-radius:16px}
+.contact-card h2{color:#F2F5F1;margin:0 0 8px}
+.contact-card h2 .num{background:var(--sun);color:var(--forest)}
+.contact-card p{color:#CFE3D8;margin:0 0 8px}
+.contact-card a{color:var(--sun);font-weight:600;text-decoration-color:var(--sun);word-break:break-word}
+.contact-card dl{margin:12px 0 0;display:grid;gap:6px;font-size:.92rem}
+.contact-card dt{color:#9DB0A5;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.contact-card dd{margin:0 0 8px;color:#F2F5F1;font-weight:500}
+.contact-card code{font-family:var(--mono);font-size:.86rem;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:5px;color:var(--sun)}
+
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.88rem;color:var(--muted)}
+
+@media print{
+  .topbar,.toc,.back-link,footer{display:none}
+  body{background:#fff;color:#000}
+  article{padding:0}
+  .contact-card{background:#f0f0f0;color:#000;border:1px solid #ccc}
+  .contact-card h2,.contact-card p,.contact-card a,.contact-card dd{color:#000}
+  .contact-card code{background:#e0e0e0;color:#000}
+  a{text-decoration:none;color:#000}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">NB</span>
+      <span>NB Studios</span>
+    </a>
+    <a class="back-link" href="privacy-gymhq.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to Privacy Policy
+    </a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Terms of Service</h1>
+    <div class="meta">
+      <span class="chip"><strong>GymHQ</strong></span>
+      <span class="chip">Effective: 19 Oct 2026</span>
+    </div>
+    <p class="lede">Welcome to GymHQ. These Terms of Service ("Terms") govern your access to and use of the GymHQ mobile application. By downloading, installing or using the Application, you agree to these Terms.</p>
+
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#s1">About the Application</a></li>
+        <li><a href="#s2">Subscription &amp; Payments</a></li>
+        <li><a href="#s3">Your Responsibilities</a></li>
+        <li><a href="#s4">Data Storage &amp; Backups</a></li>
+        <li><a href="#s5">Acceptable Use</a></li>
+        <li><a href="#s6">Intellectual Property</a></li>
+        <li><a href="#s7">Warranties</a></li>
+        <li><a href="#s8">Limitation of Liability</a></li>
+        <li><a href="#s9">Changes to Terms</a></li>
+        <li><a href="#s10">Contact</a></li>
+      </ol>
+    </details>
+  </div>
+
+  <article>
+
+    <section id="s1">
+      <h2><span class="num">01</span> About the Application</h2>
+      <p>GymHQ is an Android-based gym management application designed for gym owners and their staff. It helps you manage members, memberships, payments, expenses, attendance and reports. Your gym's members do not use this app directly.</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">02</span> Subscription and Payments</h2>
+      <p>GymHQ offers a Free plan and various paid subscription plans (Starter, Growth, Pro, Elite).</p>
+      <ul>
+        <li><strong>Billing:</strong> All payments are processed securely through Google Play. We do not collect or store your credit card or UPI details.</li>
+        <li><strong>Subscriptions:</strong> Paid plans are billed on a monthly, quarterly, or yearly basis as selected by you. Subscriptions automatically renew unless cancelled before the renewal date.</li>
+        <li><strong>Cancellation:</strong> You can cancel your subscription at any time through the Google Play Store. Refunds are subject to Google Play's refund policies.</li>
+        <li><strong>Plan Limits:</strong> Each plan has specific limits on active members and branches. If you exceed these limits, you must upgrade to a higher plan.</li>
+      </ul>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">03</span> Your Responsibilities and Member Data</h2>
+      <p>GymHQ is a data management tool. You are solely responsible for the data you enter into the application.</p>
+      <ul>
+        <li><strong>Legal Consent:</strong> You are responsible for ensuring that you have a lawful reason to record your members' personal information (such as names, phone numbers, photos, and payment history) and that you have obtained any necessary consent required by applicable laws (such as India's Digital Personal Data Protection Act, 2023).</li>
+        <li><strong>Accuracy:</strong> You are responsible for the accuracy of the contact details, membership dates, and payment records you enter.</li>
+        <li><strong>Data Privacy:</strong> Because GymHQ stores data locally on your device, you are responsible for keeping your device secure and managing staff access.</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">04</span> Data Storage and Backups</h2>
+      <p>GymHQ operates primarily offline, storing your gym's data locally on your device.</p>
+      <ul>
+        <li>Uninstalling the app, clearing app data, or losing your device may result in the permanent loss of your records.</li>
+        <li><strong>You are responsible for maintaining regular backups.</strong> GymHQ provides tools to export your data, but we cannot recover lost data if you have not created a backup.</li>
+      </ul>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">05</span> Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Application for any unlawful purpose or in violation of any regulations.</li>
+        <li>Attempt to reverse engineer, decompile, or extract the source code of the Application.</li>
+        <li>Circumvent or attempt to bypass the subscription or payment systems of the Application.</li>
+        <li>Use the Application to send spam or unauthorized marketing messages to members.</li>
+      </ul>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">06</span> Intellectual Property</h2>
+      <p>The GymHQ application, including its design, code, graphics, and branding, is owned by NB Studios and is protected by intellectual property laws. You are granted a limited, non-exclusive license to use the App for your business operations. We do not claim ownership of the business data you enter.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">07</span> Disclaimer of Warranties</h2>
+      <p>The Application is provided "AS IS" and "AS AVAILABLE". We do not guarantee that the app will operate without errors, that all calculations will be error-free, or that the app will be compatible with every Android device. Your use of the App is at your own risk.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">08</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, NB Studios shall not be liable for any indirect, incidental, or consequential damages, including but not limited to:</p>
+      <ul>
+        <li>Loss of business data or member records.</li>
+        <li>Loss of profits or revenue.</li>
+        <li>Errors in billing, fee collection, or financial reports generated by the App.</li>
+      </ul>
+      <p>You are responsible for independently verifying your financial records and maintaining backups.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">09</span> Changes to Terms</h2>
+      <p>We may update these Terms from time to time. If we make significant changes, we will update the effective date at the top of this page. Your continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
+    </section>
+
+    <div class="contact-card" id="s10">
+      <h2><span class="num">10</span> Contact Us</h2>
+      <p>If you have any questions about these Terms of Service, please contact us:</p>
+      <dl>
+        <dt>Developer</dt><dd>NB Studios</dd>
+        <dt>App Name</dt><dd>GymHQ</dd>
+      </dl>
+      <p style="margin-top:12px"><a href="mailto:admin@nbstudios.co.in">admin@nbstudios.co.in</a></p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> NB Studios. All rights reserved.</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
