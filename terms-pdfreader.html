@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service – PDF Viewer, Reader & Editor | NB Studios</title>
+<meta name="description" content="Terms of Service for PDF Viewer, Reader & Editor by NB Studios.">
+<meta name="theme-color" content="#F2F5F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1A15" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312332B'/><path d='M28 74V26h10l24 30V26h10v48H62L38 44v30z' fill='%23FFC93C'/></svg>">
+<style>
+:root{
+  --bg:#F2F5F1;--ink:#14201A;--forest:#12332B;--mint:#BFE3D0;--sun:#FFC93C;
+  --muted:#52615A;--line:#D5DDD6;--card:#FFFFFF;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E1A15;--ink:#E9F0EA;--forest:#0A2620;--muted:#9DB0A5;--line:#24372F;--card:#132620;--mint:#1A3A2E}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 1rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+a{color:var(--ink);text-decoration-color:var(--sun);text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{text-decoration-thickness:3px}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:900px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;text-decoration:none;font-size:1rem}
+.brand-mark{width:28px;height:28px;border-radius:8px;background:var(--forest);color:var(--sun);display:grid;place-items:center;font-weight:800;font-size:.8rem;flex:none}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:500;text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px;border:1px solid var(--line);transition:background .15s ease,color .15s ease}
+.back-link:hover{background:var(--card);color:var(--ink);text-decoration:none}
+.back-link svg{flex:none}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+
+.hero{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(1.9rem,5vw,2.6rem);font-weight:800;letter-spacing:-.03em;margin:0 0 16px;line-height:1.1}
+.meta{display:flex;flex-wrap:wrap;gap:8px;font-size:.85rem;color:var(--muted);margin-bottom:20px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);padding:5px 12px;border-radius:999px;font-weight:500}
+.chip strong{color:var(--ink);font-weight:600}
+.lede{font-size:1.05rem;color:var(--muted);max-width:640px;margin:0}
+
+.toc{margin:32px 0 0;padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.toc summary{cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;display:flex;align-items:center;gap:8px;color:var(--ink);user-select:none}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:"+";margin-left:auto;font-size:1.15rem;font-weight:500;color:var(--muted);transition:transform .2s ease}
+.toc[open] summary::after{transform:rotate(45deg)}
+.toc ol{margin:14px 0 0;padding:0 0 0 4px;list-style:none;display:grid;gap:6px;grid-template-columns:1fr;counter-reset:toc}
+@media(min-width:640px){.toc ol{grid-template-columns:1fr 1fr;column-gap:24px}}
+.toc li{counter-increment:toc;font-size:.92rem}
+.toc li a{display:inline-flex;gap:10px;color:var(--muted);text-decoration:none;padding:3px 0;transition:color .15s ease}
+.toc li a::before{content:counter(toc,decimal-leading-zero);font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--sun);background:color-mix(in srgb,var(--sun) 14%,transparent);padding:2px 6px;border-radius:5px;flex:none}
+.toc li a:hover{color:var(--ink)}
+
+article{padding:8px 0 80px}
+article section{padding:32px 0 0}
+article h2{font-size:1.35rem;font-weight:800;letter-spacing:-.02em;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+article h2 .num{font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--forest);background:var(--mint);padding:4px 8px;border-radius:6px;flex:none}
+@media (prefers-color-scheme:dark){article h2 .num{color:var(--sun);background:var(--mint)}}
+article p{color:var(--muted);margin:0 0 14px}
+article p strong{color:var(--ink);font-weight:600}
+article ul{margin:0 0 16px;padding:0;list-style:none}
+article ul li{position:relative;padding:6px 0 6px 28px;color:var(--muted)}
+article ul li::before{content:"";position:absolute;left:6px;top:1.05em;width:7px;height:7px;border-radius:50%;background:var(--sun)}
+article ul li strong{color:var(--ink);font-weight:600}
+
+.contact-card{margin-top:32px;padding:24px;background:var(--forest);color:#F2F5F1;border-radius:16px}
+.contact-card h2{color:#F2F5F1;margin:0 0 8px}
+.contact-card h2 .num{background:var(--sun);color:var(--forest)}
+.contact-card p{color:#CFE3D8;margin:0 0 8px}
+.contact-card a{color:var(--sun);font-weight:600;text-decoration-color:var(--sun);word-break:break-word}
+
+footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:.88rem;color:var(--muted)}
+footer a { font-weight: 600; }
+
+@media print{
+  .topbar,.toc,.back-link,footer{display:none}
+  body{background:#fff;color:#000}
+  article{padding:0}
+  .contact-card{background:#f0f0f0;color:#000;border:1px solid #ccc}
+  .contact-card h2,.contact-card p,.contact-card a{color:#000}
+  a{text-decoration:none;color:#000}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">NB</span>
+      <span>NB Studios</span>
+    </a>
+    <a class="back-link" href="privacy-pdfreader.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+      Back to Privacy Policy
+    </a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Terms of Service</h1>
+    <div class="meta">
+      <span class="chip"><strong>PDF Viewer, Reader &amp; Editor</strong></span>
+      <span class="chip">Effective: 9 Nov 2026</span>
+    </div>
+    <p class="lede">Welcome to PDF Viewer, Reader &amp; Editor ("App", "Application", "we", "our" or "us"). These Terms of Service ("Terms") govern your access to and use of the PDF Viewer, Reader &amp; Editor mobile application.</p>
+    <p class="lede" style="margin-top: 12px; font-size: 0.95rem;">By downloading, installing or using this Application, you agree to these Terms. If you do not agree, please discontinue using the Application.</p>
+
+    <details class="toc" open>
+      <summary>On this page</summary>
+      <ol>
+        <li><a href="#s1">About the Application</a></li>
+        <li><a href="#s2">Acceptance of Terms</a></li>
+        <li><a href="#s3">User Responsibilities</a></li>
+        <li><a href="#s4">Document Processing</a></li>
+        <li><a href="#s5">Signatures</a></li>
+        <li><a href="#s6">Conversion &amp; Repair</a></li>
+        <li><a href="#s7">Password Protection</a></li>
+        <li><a href="#s8">Advertisements</a></li>
+        <li><a href="#s9">Free Usage</a></li>
+        <li><a href="#s10">Intellectual Property</a></li>
+        <li><a href="#s11">Warranties</a></li>
+        <li><a href="#s12">Liability</a></li>
+        <li><a href="#s13">Termination</a></li>
+        <li><a href="#s14">Changes to Terms</a></li>
+        <li><a href="#s15">Governing Law</a></li>
+        <li><a href="#s16">Contact</a></li>
+      </ol>
+    </details>
+  </div>
+
+  <article>
+
+    <section id="s1">
+      <h2><span class="num">01</span> About the Application</h2>
+      <p>PDF Viewer, Reader &amp; Editor is a mobile document management application designed to help users view, read, edit, organize, convert, compress and manage PDF documents directly on their devices.</p>
+      <p>The Application provides features including:</p>
+      <ul>
+        <li>PDF viewing, reading and navigation.</li>
+        <li>PDF annotations, highlighting, drawing and comments.</li>
+        <li>Adding text, images, stamps and visual signatures.</li>
+        <li>Merging, splitting, rotating, extracting and organizing PDF pages.</li>
+        <li>Converting images, text and other supported formats into PDFs.</li>
+        <li>Converting PDFs into supported image formats.</li>
+        <li>PDF compression and document repair.</li>
+        <li>Password protection and removal of passwords from eligible PDF files.</li>
+        <li>Filling interactive PDF forms.</li>
+        <li>Adding headers, footers, watermarks and page numbers.</li>
+      </ul>
+      <p>Features may be updated, modified, added or discontinued from time to time.</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">02</span> Acceptance of Terms</h2>
+      <p>By using the Application, you confirm that:</p>
+      <ul>
+        <li>You are legally capable of entering into a binding agreement.</li>
+        <li>You will use the Application only for lawful purposes.</li>
+        <li>You will comply with all applicable laws and regulations.</li>
+        <li>You will not misuse, reverse engineer, exploit or interfere with the Application.</li>
+      </ul>
+      <p>If you are using the Application on behalf of another individual or organisation, you confirm that you have the authority to accept these Terms on their behalf.</p>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">03</span> User Responsibilities</h2>
+      <p>You are solely responsible for the documents and other content you access, create, edit, modify or process using the Application. You agree that:</p>
+      <ul>
+        <li>You will only access and modify documents that you own or are legally authorised to use.</li>
+        <li>You will not use the Application to create, alter or distribute fraudulent, misleading or unlawful documents.</li>
+        <li>You will not use the Application to infringe copyrights, trademarks or other intellectual property rights.</li>
+        <li>You will not use the Application for activities prohibited under applicable laws.</li>
+        <li>You are responsible for maintaining appropriate backups of your important documents.</li>
+      </ul>
+      <p>We do not claim ownership of any documents or content processed through the Application.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">04</span> Document Processing and Data Storage</h2>
+      <p>The Application is designed to process PDF documents locally on your device. Your documents are not uploaded to our servers or stored on our cloud infrastructure as part of the Application's normal document processing functionality.</p>
+      <p>You understand and acknowledge that:</p>
+      <ul>
+        <li>Your documents remain under your control on your device.</li>
+        <li>You are responsible for selecting appropriate storage locations and managing file permissions.</li>
+        <li>You are responsible for backing up important files.</li>
+        <li>Uninstalling the Application, clearing its data or experiencing device failure may result in the loss of locally stored application data.</li>
+        <li>Certain Android system services, file providers or third-party applications used to open, share or save documents may operate independently of us.</li>
+      </ul>
+      <p>Although we aim to provide private and secure document processing, no software or electronic storage system can be guaranteed to be completely free from security risks.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">05</span> PDF Editing and Electronic Signatures</h2>
+      <p>The Application allows users to add annotations, text, drawings, stamps and signatures to PDF documents.</p>
+      <p><strong>Important information about signatures:</strong><br>Signatures created using the Application are visual electronic signatures. They are not, by themselves, digitally certified signatures or legally verified digital signatures.</p>
+      <p>We do not provide identity verification, digital certificate issuance or independent authentication of signed documents. You are responsible for determining whether a signature created using the Application satisfies the legal or contractual requirements applicable to your particular situation.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">06</span> PDF Conversion, Compression and Repair</h2>
+      <p>The Application provides tools to convert, compress, modify and repair PDF documents. We make reasonable efforts to maintain the quality and accuracy of processed documents. However:</p>
+      <ul>
+        <li>Conversion may affect formatting, image quality, fonts or document layout.</li>
+        <li>Compression may reduce image quality or alter certain document characteristics.</li>
+        <li>Repair operations may not successfully recover every corrupted or damaged document.</li>
+        <li>Certain PDF files may contain unsupported features, restrictions or encryption that prevent successful processing.</li>
+      </ul>
+      <p>We do not guarantee that every document will be processed successfully or retain its original formatting and functionality. Always review the resulting document before using, submitting or sharing it.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">07</span> Password Protection and Document Security</h2>
+      <p>The Application provides password protection and encryption functionality for supported PDF documents. Users are responsible for choosing and safeguarding their passwords.</p>
+      <p>We cannot recover forgotten passwords or guarantee access to documents for which the required password has been lost. Removing password protection is permitted only where you are legally authorised to do so and have the necessary credentials. You must not use these features to gain unauthorised access to protected documents.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">08</span> Advertisements and Third-Party Services</h2>
+      <p>The Application may display banner advertisements to support its development and maintenance. Advertisements may be provided by third-party advertising networks, including Google AdMob or other advertising providers.</p>
+      <p>These third-party services may collect or process certain information in accordance with their own privacy policies and applicable laws. We do not control the content, availability or accuracy of third-party advertisements and are not responsible for products or services offered by third-party advertisers.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">09</span> Free Usage</h2>
+      <p>The Application is currently offered without mandatory subscriptions or recurring membership fees. We reserve the right to introduce optional paid features, in-app purchases or other monetisation models in future versions, subject to applicable laws and Google Play policies. Any applicable charges and payment conditions will be disclosed before a purchase is made.</p>
+    </section>
+
+    <section id="s10">
+      <h2><span class="num">10</span> Intellectual Property</h2>
+      <p>The Application, including its software, design, user interface, graphics, logos, branding and original content, is owned by or licensed to the Application's developer and is protected by applicable intellectual property laws.</p>
+      <p>You are granted a limited, non-exclusive, non-transferable and revocable licence to use the Application for personal or lawful business purposes in accordance with these Terms. You may not:</p>
+      <ul>
+        <li>Copy, reproduce, distribute or commercially exploit the Application without permission.</li>
+        <li>Reverse engineer, decompile or attempt to extract the source code, except where permitted by applicable law.</li>
+        <li>Modify or create derivative works of the Application without authorisation.</li>
+        <li>Remove copyright notices or proprietary markings.</li>
+      </ul>
+      <p>These Terms do not transfer ownership of the Application or its intellectual property to you.</p>
+    </section>
+
+    <section id="s11">
+      <h2><span class="num">11</span> Disclaimer of Warranties</h2>
+      <p>The Application is provided on an "AS IS" and "AS AVAILABLE" basis, to the maximum extent permitted by applicable law. We do not guarantee that:</p>
+      <ul>
+        <li>The Application will operate without interruptions or errors.</li>
+        <li>All PDF files will be compatible with the Application.</li>
+        <li>All editing, conversion, compression or repair operations will produce perfect results.</li>
+        <li>The Application will be compatible with every Android device or operating system version.</li>
+        <li>All features will remain available indefinitely.</li>
+      </ul>
+      <p>You use the Application at your own discretion and risk. Nothing in these Terms excludes warranties or consumer rights that cannot legally be excluded under applicable law.</p>
+    </section>
+
+    <section id="s12">
+      <h2><span class="num">12</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, the developer shall not be liable for:</p>
+      <ul>
+        <li>Loss or corruption of documents or other data.</li>
+        <li>Loss resulting from failure to maintain document backups.</li>
+        <li>Errors in converted, compressed, edited or repaired documents.</li>
+        <li>Business interruption or loss of profits arising from the use of the Application.</li>
+        <li>Indirect, incidental or consequential damages arising from the use or inability to use the Application.</li>
+      </ul>
+      <p>You are responsible for reviewing important documents and maintaining independent backups before performing document operations. Nothing in these Terms limits liability where such limitation is prohibited by applicable law, including applicable consumer protection rights.</p>
+    </section>
+
+    <section id="s13">
+      <h2><span class="num">13</span> Suspension and Termination</h2>
+      <p>We reserve the right to restrict or discontinue access to the Application, or certain features, where reasonably necessary for security, legal compliance, maintenance or prevention of misuse.</p>
+      <p>You may stop using the Application at any time by uninstalling it from your device. Termination of your use does not affect rights or obligations that arose before termination or provisions that are intended to survive termination.</p>
+    </section>
+
+    <section id="s14">
+      <h2><span class="num">14</span> Changes to the Application and Terms</h2>
+      <p>We may update, modify or discontinue certain features of the Application from time to time. We may also revise these Terms to reflect changes in the Application, applicable laws, security requirements or business practices.</p>
+      <p>Updated Terms will be published on this webpage with a revised effective date. Your continued use of the Application after updated Terms become effective constitutes acceptance of the revised Terms, to the extent permitted by applicable law.</p>
+    </section>
+
+    <section id="s15">
+      <h2><span class="num">15</span> Governing Law and Dispute Resolution</h2>
+      <p>These Terms shall be governed by the laws of India, subject to applicable consumer protection laws and other mandatory legal provisions. Any disputes arising from the use of the Application shall be handled by the competent courts and authorities in accordance with applicable law. Nothing in this section restricts any consumer rights or remedies available under applicable law.</p>
+    </section>
+
+    <div class="contact-card" id="s16">
+      <h2><span class="num">16</span> Contact Information</h2>
+      <p>If you have any questions, concerns or requests regarding these Terms of Service, please contact us:</p>
+      <p><strong>Developer:</strong> NB Studios</p>
+      <p><strong>Email:</strong> <a href="mailto:admin@nbstudios.co.in">admin@nbstudios.co.in</a></p>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="wrap">
+    &copy; <span id="y">2026</span> NB Studios. All rights reserved. &middot; 
+    <a href="privacy-pdfreader.html">Privacy Policy</a>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
