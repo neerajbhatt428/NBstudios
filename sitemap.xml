@@ -4,13 +4,13 @@
   <!-- Homepage & Blog Hub -->
   <url>
     <loc>https://nbstudios.co.in/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://nbstudios.co.in/blog.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -84,6 +84,18 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://nbstudios.co.in/privacy-selfattendance.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nbstudios.co.in/privacy-blockking.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
   <!-- Terms of Service Pages -->
   <url>
@@ -112,6 +124,12 @@
   </url>
   <url>
     <loc>https://nbstudios.co.in/terms-gymhq.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://nbstudios.co.in/terms-selfattendance.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
